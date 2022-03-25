@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "BodonyMT";
+  src: url("fonts/bodony_mt.otf");
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("fonts/century_gothic.otf");
+}
+
+h1 {
+  font-family: 'CenturyGothic';
+  font-weight:normal;
+  font-style:normal;
+}
+
+.primary_red {
+  color: #f1592a;
+}
+
+.primaty_light_blue {
+  color: #9dd9de;
+}
+
+.primary_dark_blue {
+  color: #166665;
+}
+
+.primary_white {
+  color: #fef6eb;
+}
+
+.secondary_orange {
+  color: #ff884d;
+}
+
+.secondary_blue {
+  color: #43a3a2;
+}
+
+.secondary_dark_blue {
+  color: #307776;
+}
+
+.secondary_deep_blue {
+  color: #073232;
+}
