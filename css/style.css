@@ -20,7 +20,7 @@
 }
 
 #nav-logo {
-  height: 3rem;
+  height: 4rem;
 }
 
 header {
@@ -31,7 +31,10 @@ header {
 }
 
 nav a {
+  font-size: 1.5rem;
   margin: 1rem;
+  line-height: 1.5;
+  font-size: ;
   text-decoration: none;
   color: inherit;
   font-family: BodonyMT;
