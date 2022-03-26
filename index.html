@@ -1,73 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="description" content="Site internet de la Semaine des Arts & Sciences Queer." />
-        <meta name="author" content="Benoit Renault" />
-        <title>SASS Queer</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <header>
-          <img id="nav-logo" src="assets/logos/sass_queer.svg" alt="Logo de la Semaine des Arts&Sciences Queer.">
 
-          <nav>
-            <a href="">Billeterie du Bal</a>
-            <a href="">Conférences Scientifiques</a>
-            <a href="">Représentations Artistiques</a>
-            <a href="">Infos Pratiques</a>
-            <a href="">Qui sommes-nous ?</a>
-            <a href="">Contact/Presse</a>
-          </nav>
-        </header>
-        <div>
-          <!-- Main image -->
-          <img id="main-image" src="assets/fonds/nuit.png" alt="Image principale de la Semaine des Arts&Sciences Queer, représentant un bateau orné d'une sirène barbue en figure de proue, naviguant dans la nuit sur une mer colorée. Su les voiles, la date est indiquée du 2 au 7 mai, et le nom de de la 1ère édition : 'Hissons les Couleurs !'. Dans le fond, un arc-en-ciel indique 'Conférences Scientifiques en Journée' et 'Représentations Artistiques en soirée'.">
-        </div>
-        <section id="sass-queer-section">
-          <!-- Intro -->
-          <h1>La Semaine des Arts&Sciences Queer c'est...</h1>
-          <p>
-            Omnis est necessitatibus quis magni dolorem labore voluptas itaque. Vel eaque corporis nihil vel. Aut ipsam velit commodi aspernatur magni ratione blanditiis molestiae. Et soluta et earum. Facere eveniet ipsum magni sequi enim.
-          </p>
-          <p>
-            Consequatur tenetur vero quam ut et. Quia odio est dolorum aut nisi. Fugit eos deleniti et vel. Quia et vero similique iste. Quam dolorum repellendus commodi aut.
-          </p>
-        </section>
-        <section>
-          <!-- Bal des Fiertés -->
-          <h1>Bal des Fiertés</h1>
-          <p>
-            Omnis est necessitatibus quis magni dolorem labore voluptas itaque. Vel eaque corporis nihil vel. Aut ipsam velit commodi aspernatur magni ratione blanditiis molestiae. Et soluta et earum. Facere eveniet ipsum magni sequi enim.
-          </p>
-          <p>
-            Consequatur tenetur vero quam ut et. Quia odio est dolorum aut nisi. Fugit eos deleniti et vel. Quia et vero similique iste. Quam dolorum repellendus commodi aut.
-          </p>
-        </section>
-        <section>
-          <!-- Conférences Scientifiques -->
-          <h1>Conférences Scientifiques</h1>
-          <p>
-            Omnis est necessitatibus quis magni dolorem labore voluptas itaque. Vel eaque corporis nihil vel. Aut ipsam velit commodi aspernatur magni ratione blanditiis molestiae. Et soluta et earum. Facere eveniet ipsum magni sequi enim.
-          </p>
-          <p>
-            Consequatur tenetur vero quam ut et. Quia odio est dolorum aut nisi. Fugit eos deleniti et vel. Quia et vero similique iste. Quam dolorum repellendus commodi aut.
-          </p>
-        </section>
-        <section>
-          <!-- Représentations Artistiques -->
-          <h1>Représentations Artistiques</h1>
-          <p>
-            Omnis est necessitatibus quis magni dolorem labore voluptas itaque. Vel eaque corporis nihil vel. Aut ipsam velit commodi aspernatur magni ratione blanditiis molestiae. Et soluta et earum. Facere eveniet ipsum magni sequi enim.
-          </p>
-          <p>
-            Consequatur tenetur vero quam ut et. Quia odio est dolorum aut nisi. Fugit eos deleniti et vel. Quia et vero similique iste. Quam dolorum repellendus commodi aut.
-          </p>
-        </section>
-        <section>
-          <!-- Map to the different places. -->
-        </section>
-        <footer>Copyright &copy; EXIT</footer>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Site internet de la Semaine des Arts & Sciences Queer." />
+  <meta name="author" content="Benoit Renault" />
+  <title>SASS Queer</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <a id="nav-logo-link" href="index.html">
+      <img id="nav-logo" src="assets/logos/sass_queer.svg" alt="Logo de la Semaine des Arts&Sciences Queer.">
+    </a>
+    <nav>
+      <a href="">Billeterie du Bal</a>
+      <a href="">Conférences Scientifiques</a>
+      <a href="">Représentations Artistiques</a>
+      <a href="">Infos Pratiques</a>
+      <a href="">Qui sommes-nous ?</a>
+      <a href="">Contact/Presse</a>
+    </nav>
+  </header>
+
+  <img id="main-image" src="assets/fonds/nuit.png" alt="Image principale de la Semaine des Arts&Sciences Queer, représentant un bateau orné d'une sirène barbue en figure de proue, naviguant dans la nuit sur une mer colorée. Su les voiles, la date est indiquée du 2 au 7 mai, et le nom de de la 1ère édition : 'Hissons les Couleurs !'. Dans le fond, un arc-en-ciel indique 'Conférences Scientifiques en Journée' et 'Représentations Artistiques en soirée'.">
+
+  <div class="bg-zero">
+    <div class="diagonal-box">
+      <div class="content">
+        <h1>Une semaine dédiée à la Culture Queer !</h1>
+        <!-- <p class="intro">
+          Je réserve ma place au Bal des Fiertés !
+        </p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="diagonal-box bg-one">
+    <div class="content">
+      <h2>Des représentations artistiques tous les soirs !</h2>
+      <p>
+        Du lundi au vendredi, les artistes sortiront au profit de la nuit !
+        Chaque jour, un art différent sera représenté, et plus de 30
+        artistes amateur-e-s et professionnel-le-s, de renommée locale à
+        internationale, partagerons leurs oeuvres !
+        <!-- De Colin Horgan, créateur du jeu-vidéo indépendant "Lucah: Born of a
+        Dream", à Sullivan Le Postec, créateur de la websérie maintes fois
+        primée "Les Engagés", en passant par les sculptures et dessins de
+        Claire Gravelines, il y en aura pour tous les goûts ! -->
+      </p>
+      <p>
+      Au Programme :
+      <ul>
+        <li>
+          Jeu-Vidéo - Lundi 2 mai (Salle René Char) :
+          </br>
+          Soirée de dévoilement de la VF du jeu “Lucah: Born of Dream”
+        </li>
+
+        <li>
+          Arts-Plastiques - Mardi 3 mai (Hall d’Exposition des Humanités)
+          </br>
+          Vernissage de l’exposition de Claire Gravelines : Amours Queer
+        </li>
+
+        <li>
+          Théâtre - Mercredi 4 mai (Grand Restaurant INSA)
+          </br>
+          Match d'Impro entre le Corpus Bang Bang et la Troupe Théâtrale de l'INSA
+        </li>
+
+        <li>
+          Drag - Jeudi 5 mai (K-Fêt, bar étudiant INSA)
+          </br>
+          Spectacle de drag queens et kings
+        </li>
+
+        <li>
+          Cinéma - Vendredi 7 mai à (Amphi Gaston Berger)
+          </br>
+          Projection de la web-série “Les Engagés” & temps d’échange avec le créateur et l’équipe.
+        </li>
+      </ul>
+      </p>
+      <div class="columns">
+        <figure class="figure">
+
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagonal-box bg-two">
+    <div class="content">
+      <h2>Des conférences scientifiques tous les midis !</h2>
+      <p>
+        Un cycle de conférences techniques & scientifiques sur le thème "Réseaux
+        et Applis de Rencontre : Pirates en Eaux Troubles" viendra égayer vos
+        journées, tous les jours à partir de 13h. Et pour aller jusqu'au bout
+        du thème de pirate des mers de bits, toutes les conférences auront lieu
+        dans la Salle Vitrine du bâtiment Hedy Lamarr (Département Télécoms).
+      </p>
+
+      <p>
+      Au Programme :
+        <ul>
+          <li>
+
+            </br>
+
+          </li>
+          <li>
+
+            </br>
+
+          </li>
+          <li>
+
+            </br>
+
+          </li>
+          <li>
+
+            </br>
+
+          </li>
+          <li>
+
+            </br>
+
+          </li>
+        </ul>
+      </p>
+
+      <div class="columns">
+        <figure class="figure">
+          <figcaption>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagonal-box bg-three">
+    <div class="content">
+      <h2>On finit en beauté avec le Bal des Fiertés !</h2>
+      <p>
+      </p>
+    </div>
+  </div>
+
+  <div class="diagonal-box bg-one">
+    <div class="content">
+      <h2>Une semaine de prévention & de sensibilisation</h2>
+      <p>
+
+      </p>
+      <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagonal-box bg-two">
+    <div class="content">
+      <h2>La carte aux trésors pour se retrouver</h2>
+      <p>
+      </p>
+    </div>
+  </div>
+  <div class="clip-path">
+    <div class="content">
+      <h2>Nos partenaires</h2>
+      <p>
+      </p>
+    </div>
+  </div>
+
+  <footer>Copyright &copy; EXIT</footer>
+
+  <script src="./js/script.js"></script>
+
+</body>
+
 </html>

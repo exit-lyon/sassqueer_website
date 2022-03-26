@@ -1,0 +1,393 @@
+/***************************************/
+#main-image {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+@font-face {
+  font-family: "BodonyMT";
+  src: url("fonts/bodony_mt.otf");
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("fonts/century_gothic.otf");
+}
+
+#nav-logo-link {
+  margin-right: auto;
+  padding: 0.75rem;
+}
+
+#nav-logo {
+  height: 3rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* aligns links vertically */
+  background-color: #073232;
+}
+
+nav a {
+  margin: 1rem;
+  text-decoration: none;
+  color: inherit;
+  font-family: BodonyMT;
+}
+
+nav a:hover {
+  border-bottom: 0.1rem solid #fef6eb;
+}
+
+
+.primary_red {
+  color: #f1592a;
+}
+
+.primaty_light_blue {
+  color: #9dd9de;
+}
+
+.primary_dark_blue {
+  color: #166665;
+}
+
+.primary_white {
+  color: #fef6eb;
+}
+
+.secondary_orange {
+  color: #ff884d;
+}
+
+.secondary_blue {
+  color: #43a3a2;
+}
+
+.secondary_dark_blue {
+  color: #307776;
+}
+
+.secondary_deep_blue {
+  color: #073232;
+}
+
+.tertiary_deep_blue {
+  color: #052626;
+}
+/***************************************/
+
+@charset "UTF-8";
+:root {
+  --width: 100vw;
+  --full-width: 100vw;
+  --angle: -5deg;
+  /*-----------------
+  Magic Number Alert:
+
+  the 0.09719 is calculated by this formula:
+  tan(11°) / 2
+  11° is the current skewY value.
+  ------------------*/
+  --magic-number: 0.043744331765;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+  --clip-padding: calc(var(--full-width) * var(--magic-number));
+}
+@media (min-width: 52em) {
+  :root {
+    --width: 52rem;
+  }
+}
+
+.diagonal-box {
+  position: relative;
+  padding: var(--skew-padding) 0;
+  margin-top: -1px;
+}
+.diagonal-box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewy(var(--angle));
+  transform-origin: 50% 0;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+}
+
+.bg-zero {
+  background-image: url("../assets/fonds/reflet.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:100%;
+}
+
+.bg-one:before {
+  background-image: linear-gradient(45deg, #ff884d, #f1592a);
+}
+
+.bg-two:before {
+  background-image: linear-gradient(-135deg, #9dd9de, #166665);
+}
+
+.bg-three:before {
+  background-image: linear-gradient(-135deg, #073232, #052626);
+}
+
+.content {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 1.5em;
+  position: relative;
+  /* -----------
+  enable the border to see, that the content
+  perfectly fits into the section withou
+  bleeding into the adjecting areas:
+  ------------ */
+}
+
+/* --------------------
+Clip Path Update
+-------------------- */
+.clip-path {
+  position: relative;
+  margin-top: calc( ( var(--clip-padding) * -1 ) - 2px );
+  background-size: 0.5em 0.5em, 100% 100%;
+  padding: calc( ( var(--clip-padding) * 2 ) - ( var(--clip-padding) - var(--skew-padding) ) ) 0 4em;
+  clip-path: polygon(0% calc(var(--clip-padding) * 2), 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% calc(var(--clip-padding) * 2), 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* --------------------
+Presentational Styles
+-------------------- */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  transition: font-size 0.2s linear;
+}
+@media (min-width: 70em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+body {
+  background: #073232;
+  color: #fef6eb;
+  font-family: "BodonyMT", serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto 1em;
+  padding: 0 1em;
+  max-width: 42rem;
+  line-height: 1.2;
+  transform: skewY(var(--angle));
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin: 0 0 0.5em;
+  font-weight: 900;
+}
+
+.intro {
+  font-size: 1.25em;
+  transform: skewY(var(--angle));
+  margin: 0em auto 0em;
+  text-align: center;
+  background: #fef6eb;
+  color: #052626;
+  font-weight: 900;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+.intro a {
+  background-image: linear-gradient(transparent 90%, 0, #052626 100%);
+  background-image: none;
+  border-bottom: 4px solid;
+  transition: none;
+}
+.intro a:hover {
+  border-color: #f1592a;
+  opacity: 1;
+}
+
+.order-button {
+  font-size: 1.25em;
+  transform: skewY(var(--angle));
+  margin: 0em auto 0em;
+  text-align: center;
+  background: #fef6eb;
+  color: #052626;
+  font-weight: 900;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+
+li {
+  font-size: 1.25em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.25em;
+  margin: 0;
+  line-height: 1.5;
+}
+p + p, svg + p {
+  margin-top: 1em;
+}
+p code {
+  background: #0033;
+  padding: 0.125em 0.375em;
+  border-radius: 0.125em;
+}
+@media (min-width: 35em) {
+  p code {
+    white-space: nowrap;
+  }
+}
+p a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 90%, 0, #fef6eb 100%);
+  padding: 0.125em 0;
+  transition: opacity 0.3s ease-out;
+}
+p a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.columns {
+  display: flex;
+  margin: 2em -1em;
+}
+
+.figure {
+  display: block;
+  width: 100%;
+  margin: 0 1em;
+}
+.figure svg {
+  display: block;
+  width: 100%;
+}
+.figure .object {
+  transform-origin: 140px 140px;
+}
+.figure .object--rotate {
+  animation: rotate 3s ease-in-out alternate infinite;
+}
+.figure .object--skew {
+  animation: skew 3s ease-in-out alternate infinite;
+}
+.figure .object--skew-pause {
+  animation: skew-pause 6s ease-in-out infinite;
+}
+.figure .object--skew-pause-alt {
+  animation: skew-pause-alt 6s ease-in-out infinite;
+}
+.figure figcaption {
+  margin-top: 0.5em;
+  line-height: 1.5;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(-5deg) scaleX(1.2);
+  }
+}
+@keyframes skew {
+  to {
+    transform: skewY(-5deg);
+  }
+}
+@keyframes skew-pause {
+  0%, 70%, 100% {
+    transform: skewY(0deg);
+  }
+  20%, 50% {
+    transform: skewY(-5deg);
+  }
+}
+@keyframes skew-pause-alt {
+  0%, 40%, 100% {
+    transform: skewY(0deg);
+  }
+  20%, 30% {
+    transform: skewY(-5deg);
+  }
+}
+.formula {
+  font-family: monospace;
+  font-size: 1.5em;
+  display: block;
+  margin: 1em auto;
+  text-align: center;
+}
+@media (min-width: 26em) {
+  .formula {
+    font-size: 2em;
+  }
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3%;
+  margin: 2em 0;
+  --translation: 0;
+}
+.boxes .box {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border: 1px solid #fff;
+  background: #fff3;
+  transform: translateY(var(--translation));
+  animation: translate 3s ease-in-out infinite;
+}
+.boxes .box:nth-child(1) {
+  --translation: calc(var(--skew-padding) * 1.5);
+}
+.boxes .box:nth-child(2) {
+  --translation: calc(var(--skew-padding) * 1);
+}
+.boxes .box:nth-child(3) {
+  --translation: calc(var(--skew-padding) * 0.5);
+}
+.boxes .box:nth-child(4) {
+  --translation: calc(var(--skew-padding) * 0);
+}
+
+@keyframes translate {
+  0%, 20%, 100% {
+    transform: translateY(0);
+  }
+  50%, 70% {
+    transform: translateY(var(--translation));
+  }
+}
