@@ -1,3 +1,9 @@
+* {
+margin:0;
+padding:0;
+border: 0;
+}
+
 @font-face {
   font-family: "BodonyMT";
   src: url("fonts/bodony_mt.otf");
@@ -8,10 +14,12 @@
   src: url("fonts/century_gothic.otf");
 }
 
-h1 {
+body {
   font-family: 'CenturyGothic';
   font-weight:normal;
   font-style:normal;
+  background-color: #052626;
+  color: #fef6eb;
 }
 
 .primary_red {
@@ -44,4 +52,40 @@ h1 {
 
 .secondary_deep_blue {
   color: #073232;
+}
+
+.tertiary_deep_blue {
+  color: #052626;
+}
+
+#nav-logo {
+  height: 3rem;
+  margin-right: auto;
+  padding: 0.75rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* aligns links vertically */
+  background-color: #f1592a;
+}
+
+nav a {
+  margin: 1rem;
+  text-decoration: none;
+  color: inherit;
+  font-family: BodonyMT;
+}
+
+nav a:hover {
+  border-bottom: 0.1rem solid #fef6eb
+}
+
+#main-image {
+  width: 100%;
+}
+
+section {
+  padding: 1rem;
 }
