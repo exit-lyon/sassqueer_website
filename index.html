@@ -8,6 +8,7 @@
   <title>SASS Queer</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/flickity.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -17,8 +18,8 @@
       <img id="nav-logo" src="assets/logos/sass_queer.svg" alt="Logo de la Semaine des Arts&Sciences Queer.">
     </a>
     <nav>
-      <a href="">Billeterie du Bal</a>
-      <a href="">Conférences Scientifiques</a>
+      <a href="">Bal des Fiertés</a>
+      <a href="">Confs Scientifiques</a>
       <a href="">Représentations Artistiques</a>
       <a href="">Infos Pratiques</a>
       <a href="">Qui sommes-nous ?</a>
@@ -43,55 +44,65 @@
     <div class="content">
       <h2>Des représentations artistiques tous les soirs !</h2>
       <p>
-        Du lundi au vendredi, les artistes sortiront au profit de la nuit !
-        Chaque jour, un art différent sera représenté, et plus de 30
-        artistes amateur-e-s et professionnel-le-s, de renommée locale à
-        internationale, partagerons leurs oeuvres !
+        Du lundi au vendredi, les artistes sortiront au profit de la nuit ! Chaque jour, un art différent sera représenté, et plus de 30 artistes amateur-e-s et professionnel-le-s, de renommée locale à internationale, partagerons leurs oeuvres !
         <!-- De Colin Horgan, créateur du jeu-vidéo indépendant "Lucah: Born of a
         Dream", à Sullivan Le Postec, créateur de la websérie maintes fois
         primée "Les Engagés", en passant par les sculptures et dessins de
         Claire Gravelines, il y en aura pour tous les goûts ! -->
       </p>
-      <p>
-      Au Programme :
-      <ul>
-        <li>
-          Jeu-Vidéo - Lundi 2 mai (Salle René Char) :
-          </br>
-          Soirée de dévoilement de la VF du jeu “Lucah: Born of Dream”
-        </li>
 
-        <li>
-          Arts-Plastiques - Mardi 3 mai (Hall d’Exposition des Humanités)
-          </br>
-          Vernissage de l’exposition de Claire Gravelines : Amours Queer
-        </li>
-
-        <li>
-          Théâtre - Mercredi 4 mai (Grand Restaurant INSA)
-          </br>
-          Match d'Impro entre le Corpus Bang Bang et la Troupe Théâtrale de l'INSA
-        </li>
-
-        <li>
-          Drag - Jeudi 5 mai (K-Fêt, bar étudiant INSA)
-          </br>
-          Spectacle de drag queens et kings
-        </li>
-
-        <li>
-          Cinéma - Vendredi 7 mai à (Amphi Gaston Berger)
-          </br>
-          Projection de la web-série “Les Engagés” & temps d’échange avec le créateur et l’équipe.
-        </li>
-      </ul>
-      </p>
-      <div class="columns">
-        <figure class="figure">
-
-          <figcaption></figcaption>
-        </figure>
+      <div class="card-container">
+        <div class="cards">
+          <label class="card left-card">
+            <img src="./assets/video_games/lucah.gif" alt="song"  onclick="moveCarousel(event)">
+          </label>
+          <label class="card middle-card">
+            <img src="./assets/video_games/lucah_1.gif" alt="song" onclick="moveCarousel(event)">
+          </label>
+          <label class="card right-card">
+            <img src="./assets/video_games/lucah_2.gif" alt="song" onclick="moveCarousel(event)">
+          </label>
+          <label class="card hidden-card">
+            <img src="./assets/video_games/lucah_3.gif" alt="song" onclick="moveCarousel(event)">
+          </label>
+        </div>
       </div>
+
+
+      <p>
+        Au Programme :
+        <ul>
+          <li>
+            Jeu-Vidéo - Lundi 2 mai (Salle René Char) :
+            </br>
+            Soirée de dévoilement de la VF du jeu “Lucah: Born of Dream”
+          </li>
+
+          <li>
+            Arts-Plastiques - Mardi 3 mai (Hall d’Exposition des Humanités)
+            </br>
+            Vernissage de l’exposition de Claire Gravelines : Amours Queer
+          </li>
+
+          <li>
+            Théâtre - Mercredi 4 mai (Grand Restaurant INSA)
+            </br>
+            Match d'Impro entre le Corpus Bang Bang et la Troupe Théâtrale de l'INSA
+          </li>
+
+          <li>
+            Drag - Jeudi 5 mai (K-Fêt, bar étudiant INSA)
+            </br>
+            Spectacle de drag queens et kings
+          </li>
+
+          <li>
+            Cinéma - Vendredi 7 mai à (Amphi Gaston Berger)
+            </br>
+            Projection de la web-série “Les Engagés” & temps d’échange avec le créateur et l’équipe.
+          </li>
+        </ul>
+      </p>
     </div>
   </div>
 
@@ -99,15 +110,12 @@
     <div class="content">
       <h2>Des conférences scientifiques tous les midis !</h2>
       <p>
-        Un cycle de conférences techniques & scientifiques sur le thème "Réseaux
-        et Applis de Rencontre : Pirates en Eaux Troubles" viendra égayer vos
-        journées, tous les jours à partir de 13h. Et pour aller jusqu'au bout
-        du thème de pirate des mers de bits, toutes les conférences auront lieu
-        dans la Salle Vitrine du bâtiment Hedy Lamarr (Département Télécoms).
+        Un cycle de conférences techniques & scientifiques sur le thème "Réseaux et Applis de Rencontre : Pirates en Eaux Troubles" viendra égayer vos journées, tous les jours à partir de 13h. Et pour aller jusqu'au bout du thème de pirate des mers de bits, toutes
+        les conférences auront lieu dans la Salle Vitrine du bâtiment Hedy Lamarr (Département Télécoms).
       </p>
 
       <p>
-      Au Programme :
+        Au Programme :
         <ul>
           <li>
 
@@ -137,9 +145,48 @@
         </ul>
       </p>
 
-      <div class="columns">
-        <figure class="figure">
+      <div class="headshots-box">
+        <figure>
+          <img class="headshot" src="./assets/conferences/paul_louis_hery.png">
           <figcaption>
+            Paul-Louis Héry
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img class="headshot" src="./assets/conferences/wilfried_carbonnell.png">
+          <figcaption>
+            Wilfried Carbonnell
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img class="headshot" src="./assets/conferences/virginie_mathivet.png">
+          <figcaption>
+            Virginie Mathivet
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img class="headshot" src="./assets/conferences/clemence_abry_durand.png">
+          <figcaption>
+            Clémence Abry-Durand
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img class="headshot" src="./assets/conferences/nino_andre_vinciane_mandrin.png">
+          <figcaption>
+            Nino André
+            </br>
+            & Vinciane Mandrin
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img class="headshot" src="./assets/conferences/jessica_pidoux.png">
+          <figcaption>
+            Jessica Pidoux
           </figcaption>
         </figure>
       </div>

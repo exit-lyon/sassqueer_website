@@ -30,20 +30,42 @@ header {
   background-color: #073232;
 }
 
+nav {
+  text-align: justify;
+}
+
 nav a {
-  font-size: 1.5rem;
-  margin: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   line-height: 1.5;
-  font-size: ;
   text-decoration: none;
   color: inherit;
-  font-family: BodonyMT;
+  display: inline-block;
+  border-bottom: 0.1rem solid #fff0;
 }
 
 nav a:hover {
   border-bottom: 0.1rem solid #fef6eb;
 }
 
+.headshots-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .headshots-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.headshot {
+  height: 7rem;
+}
 
 .primary_red {
   color: #f1592a;
@@ -81,6 +103,79 @@ nav a:hover {
   color: #052626;
 }
 /***************************************/
+.card-container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card-container input[type=radio] {
+  display: none;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}
+
+.card {
+  position: absolute;
+  width: 20rem;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.left-card {
+  display: block;
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.right-card {
+  display: block;
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.middle-card {
+  display: block;
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.middle-card img, {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+.hidden-card {
+  display: none;
+}
+/*************************************************/
 
 @charset "UTF-8";
 :root {
@@ -274,87 +369,6 @@ p a {
 p a:hover {
   text-decoration: none;
   opacity: 0.8;
-}
-
-.columns {
-  display: flex;
-  margin: 2em -1em;
-}
-
-.figure {
-  display: block;
-  width: 100%;
-  margin: 0 1em;
-}
-.figure svg {
-  display: block;
-  width: 100%;
-}
-.figure .object {
-  transform-origin: 140px 140px;
-}
-.figure .object--rotate {
-  animation: rotate 3s ease-in-out alternate infinite;
-}
-.figure .object--skew {
-  animation: skew 3s ease-in-out alternate infinite;
-}
-.figure .object--skew-pause {
-  animation: skew-pause 6s ease-in-out infinite;
-}
-.figure .object--skew-pause-alt {
-  animation: skew-pause-alt 6s ease-in-out infinite;
-}
-.figure figcaption {
-  margin-top: 0.5em;
-  line-height: 1.5;
-  font-weight: 700;
-  opacity: 0.9;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(-5deg) scaleX(1.2);
-  }
-}
-@keyframes skew {
-  to {
-    transform: skewY(-5deg);
-  }
-}
-@keyframes skew-pause {
-  0%, 70%, 100% {
-    transform: skewY(0deg);
-  }
-  20%, 50% {
-    transform: skewY(-5deg);
-  }
-}
-@keyframes skew-pause-alt {
-  0%, 40%, 100% {
-    transform: skewY(0deg);
-  }
-  20%, 30% {
-    transform: skewY(-5deg);
-  }
-}
-.formula {
-  font-family: monospace;
-  font-size: 1.5em;
-  display: block;
-  margin: 1em auto;
-  text-align: center;
-}
-@media (min-width: 26em) {
-  .formula {
-    font-size: 2em;
-  }
 }
 
 .boxes {
