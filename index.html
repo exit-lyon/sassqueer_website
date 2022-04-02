@@ -1,392 +1,447 @@
-<!DOCTYPE html>
-<html lang="fr">
+  <!DOCTYPE html>
+  <html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Site internet de la Semaine des Arts & Sciences Queer." />
-  <meta name="author" content="Benoit Renault" />
-  <title>SASS Queer</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="./css/normalize.min.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site internet de la Semaine des Arts & Sciences Queer." />
+    <meta name="author" content="Benoit Renault" />
+    <title>SASS Queer</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
 
-<body>
-  <header>
-    <a id="nav-logo-link" href="index.html">
-      <img id="nav-logo" src="assets/logos/sass_queer.svg" alt="Logo de la Semaine des Arts&Sciences Queer.">
-    </a>
-    <nav>
-      <a href="./bal-des-fiertes.html">Bal des Fiertés</a>
-      <a href="./conferences-scientifiques.html">Confs Scientifiques</a>
-      <a href="./representations-artistiques.html">Représentations Artistiques</a>
-      <a href="./informations-pratiques.html">Infos Pratiques</a>
-      <a href="./qui-sommes-nous.html">Qui sommes-nous ?</a>
-      <a href="./contact-presse.html">Contact/Presse</a>
-    </nav>
-  </header>
+  <body>
+    <header>
+      <a id="nav-logo-link" href="index.html">
+        <img id="nav-logo" src="assets/logos/sass_queer.svg" alt="Logo de la Semaine des Arts&Sciences Queer.">
+      </a>
+      <!-- <nav>
+        <a href="./bal-des-fiertes.html">Bal des Fiertés</a>
+        <a href="./conferences-scientifiques.html">Confs Scientifiques</a>
+        <a href="./representations-artistiques.html">Représentations Artistiques</a>
+        <a href="./informations-pratiques.html">Infos Pratiques</a>
+        <a href="./qui-sommes-nous.html">Qui sommes-nous ?</a>
+        <a href="./contact-presse.html">Contact/Presse</a>
+      </nav> -->
+    </header>
 
-  <img id="main-image" src="assets/fonds/nuit.png" alt="Image principale de la Semaine des Arts&Sciences Queer, représentant un bateau orné d'une sirène barbue en figure de proue, naviguant dans la nuit sur une mer colorée. Su les voiles, la date est indiquée du 2 au 7 mai, et le nom de de la 1ère édition : 'Hissons les Couleurs !'. Dans le fond, un arc-en-ciel indique 'Conférences Scientifiques en Journée' et 'Représentations Artistiques en soirée'.">
+    <img id="main-image" src="assets/fonds/nuit.png" alt="Image principale de la Semaine des Arts&Sciences Queer, représentant un bateau orné d'une sirène barbue en figure de proue, naviguant dans la nuit sur une mer colorée. Su les voiles, la date est indiquée du 2 au 7 mai, et le nom de de la 1ère édition : 'Hissons les Couleurs !'. Dans le fond, un arc-en-ciel indique 'Conférences Scientifiques en Journée' et 'Représentations Artistiques en soirée'.">
 
-  <div class="bg-zero">
-    <div class="diagonal-box">
+    <div class="bg-zero">
+      <div class="diagonal-box">
+        <div class="content">
+          <h1>Une semaine dédiée à la Culture Queer !</h1>
+          <p class="intro skew">
+            <a href="https://www.helloasso.com/associations/exit/evenements/ticket-pour-le-bal"> > Je réserve ma place au Bal des Fiertés ! < </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="diagonal-box bg-one">
       <div class="content">
-        <h1>Une semaine dédiée à la Culture Queer !</h1>
-        <p class="intro skew">
+        <h2>Des représentations artistiques tous les soirs !</h2>
+        <p>
+          Du lundi au vendredi, les artistes sortiront au profit de la nuit ! Chaque jour, un art différent sera représenté, et plus de 30 artistes amateur-e-s et professionnel-le-s, de renommée locale à internationale, partagerons leurs oeuvres !
+          <!-- De Colin Horgan, créateur du jeu-vidéo indépendant "Lucah: Born of a
+          Dream", à Sullivan Le Postec, créateur de la websérie maintes fois
+          primée "Les Engagés", en passant par les sculptures et dessins de
+          Claire Gravelines, il y en aura pour tous les goûts ! -->
+        </p>
+
+        <div class="card-container">
+          <div class="cards">
+            <div class="card left-card">
+              <img src="./assets/projection/engages_1.gif" alt="song"  onclick="clickCarousel(event)">
+              <h3>Les Engagés</h3>
+            </div>
+            <div class="card middle-card">
+              <img src="./assets/video_games/traces.gif" alt="song" onclick="clickCarousel(event)">
+              <h3>TraceS</h3>
+            </div>
+            <div class="card right-card">
+              <img src="./assets/video_games/lucah_2.gif" alt="song" onclick="clickCarousel(event)">
+              <h3>Lucah</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/exposition/tq1.gif" alt="song" onclick="clickCarousel(event)">
+              <h3>Amours Queer</h3>
+            </div>
+            <!-- <div class="card hidden-card">
+              <img src="./candidate_assets/impro/corpus_bang_bang.jpg" alt="song" onclick="clickCarousel(event)">
+              <h3>Corpus Bang Bang</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./candidate_assets/impro/tti.jpg" alt="song" onclick="clickCarousel(event)">
+              <h3>Troupe Théâtrale de l'INSA</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./candidate_assets/dragshow/gf.jpg" alt="song" onclick="clickCarousel(event)">
+              <h3>Drag Show</h3>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="planning">
+          <!-- <div class="stars">***</div> -->
+
+          <h3>--- Programme en Soirée ---</h3>
+
+          <div class="stars">***</div>
+
+          <h4> Lundi 2 mai ; 19h-23h</h4>
+          <p><em>(Salle Vitrine - Bâtiment Hédy Lamarre)</em></p>
+          <img src="./assets/icons/icons8-game-controller-100.png" class="planning-icon">
+          <p> Soirée Découverte de Jeux-Vidéo Queer Indépendants "TraceS" et "Lucah: Born of a Dream" avec les auteur-e-s</p>
+
+          <div class="stars">***</div>
+
+          <h4> Mardi 3 mai ; 19h-21h</h4>
+          <p><em>(Galerie des Humanités)</em></p>
+          <img src="./assets/icons/icons8-venus-de-milo-100.png" class="planning-icon">
+          <p>Vernissage de l’exposition "Amours Queer" avec l'artiste, Claire Gravelines</p>
+
+          <div class="stars">***</div>
+
+          <h4> Mercredi 4 mai ; 20h-21h30</h4>
+          <p><em>(Bibliothèque Marie Curie)</em></p>
+          <img src="./assets/icons/icons8-theatre-mask-100.png" class="planning-icon">
+          <p>Match d'Impro entre le Corpus Bang Bang et la Troupe Théâtrale de l'INSA.</p>
+
+          <div class="stars">***</div>
+
+          <h4> Jeudi 5 mai ; 20-23h</h4>
+          <p><em>(K-Fêt - Bâtiment Le Thélème)</em></p>
+          <img src="./assets/icons/icons8-imperial-mustache-100.png" class="planning-icon">
+          <p>Drag Show de folie avec 11 Kings & Queens</p>
+
+          <div class="stars">***</div>
+
+          <h4> Vendredi 6 mai ; 19-23h</h4>
+          <p><em>(Amphithéâtre Gaston Berger)</em></p>
+          <img src="./assets/icons/icons8-clapperboard-100.png" class="planning-icon">
+          <p>Projection de la web-série “Les Engagés” & temps d’échange avec le créateur et l’équipe.</p>
+
+          <div class="stars">***</div>
+      </div>
+
+    </div>
+  </div>
+
+    <div class="diagonal-box bg-two">
+      <div class="content">
+        <h2>Des conférences scientifiques tous les midis !</h2>
+        <p>
+          Un cycle de conférences techniques & scientifiques sur le thème "Réseaux et Applis de Rencontre : Pirates en Eaux Troubles" viendra égayer vos journées, tous les jours à partir de 13h. Et pour aller jusqu'au bout du thème de pirate des mers de bits, toutes
+          les conférences auront lieu dans la Salle Vitrine du bâtiment Hedy Lamarr (Département Télécoms), territoire des Hackerz de l'INSA !
+        </p>
+
+
+        <div class="card-container">
+          <div class="cards">
+            <div class="card left-card">
+              <img src="./assets/conferences/jessica_pidoux.png" alt="song"  onclick="clickCarousel(event)">
+              <h3>Dr. Jessica Pidoux</h3>
+            </div>
+            <div class="card middle-card">
+              <img src="./assets/conferences/paul_louis_hery.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Paul-Louis Héry</h3>
+            </div>
+            <div class="card right-card">
+              <img src="./assets/conferences/benoit_renault.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Benoit Renault</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/conferences/wilfried_carbonnell.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Wilfried Carbonnell</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/conferences/virginie_mathivet.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Dr. Virginie Mathivet</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/conferences/clemence_abry_durand.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Clémence Abry-Durand</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/conferences/nino_andre_vinciane_mandrin.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Nino André </br> & Vinciane Mandrin</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="planning">
+          <h3>--- Programme en Journée ---</h3>
+
+          <p><em>(Tous les jours en Salle Vitrine - Bâtiment Hédy Lamarre)</em></p>
+
+          <div class="stars">***</div>
+
+          <h4> Lundi 2 mai ; 13h-14h</h4>
+          <img src="./assets/icons/icons8-defense-100.png" class="planning-icon">
+          <p><em>Paul-Louis Héry et Benoit Renault</em></p>
+          <p>"Tinder, Grindr & co : Rétro-Ingénierie, Détournements, Dangers et Précautions"</p>
+
+          <div class="stars">***</div>
+
+          <h4> Mardi 2 mai ; 13h-14h</h4>
+          <img src="./assets/icons/icons8-defense-100.png" class="planning-icon">
+          <p><em>Wilfried Carbonnell</em></p>
+          <p>"BeTolerant : une application de rencontre et un réseau social respectueux"</p>
+
+          <div class="stars">***</div>
+
+          <h4> Mercredi 3 mai ; 13h-14h</h4>
+          <img src="./assets/icons/icons8-artificial-intelligence-100.png" class="planning-icon">
+          <p><em>Virginie Mathivet</em></p>
+          <p>"Jeux de données - biais et impacts sur les femmes dans un monde numérisé"</p>
+
+          <div class="stars">***</div>
+
+          <h4> Jeudi 4 mai ; 13h-15h30</h4>
+          <img src="./assets/icons/icons8-gender-100.png" class="planning-icon">
+          <p><em>Clémence Abry-Durand ; Nino André & Vinciane Mandrin</em></p>
+          <p>“Qu'est-ce que le genre fait aux sciences ?”
+          </br>
+            & Performance de "Posture(s)" avec temps d’échange avec les artistes
+          </p>
+
+          <div class="stars">***</div>
+
+          <h4> Vendredi 5 mai ; 13h-14h</h4>
+          <img src="./assets/icons/icons8-tinder-500.png" class="planning-icon">
+          <p><em>Jessica Pidoux</em></p>
+          <p>"L’Amour sous algorithme"</p>
+
+          <div class="stars">***</div>
+        </div>
+      </div>
+    </div>
+    <div class="diagonal-box bg-three">
+      <div class="content">
+        <h2>On finit en beauté avec le Bal des Fiertés !</h2>
+        <p>
+        Le Festival s'achèvera par le premier Bal des Fiertés de Lyon, avec concert dansant,
+        repas, espace jeux, village associatif et un espace prévention ! À l'image du reste de la semaine,
+        le bal est un événement inclusif, ouvert à toustes, sans distinctions.
+        Comme dirait Lady Gaga :
+        </p>
+        <blockquote>
+            "No matter gay, straight, or bi', lesbian, transgender life
+            <br>
+            I'm on the right track, baby, I was born to survive
+            <br>
+            No matter Black, white or beige, chola, or Orient' made
+            <br>
+            I'm on the right track, baby, I was born to be brave"
+        </blockquote>
+
+        <p>
+          Alors mets ton plus beau costume de pirate, moussaillon-ne, et rejoins-nous !
+        </p>
+
+        <p class="intro">
           <a href="https://www.helloasso.com/associations/exit/evenements/ticket-pour-le-bal"> > Je réserve ma place au Bal des Fiertés ! < </a>
         </p>
-      </div>
-    </div>
-  </div>
 
-  <div class="diagonal-box bg-one">
-    <div class="content">
-      <h2>Des représentations artistiques tous les soirs !</h2>
-      <p>
-        Du lundi au vendredi, les artistes sortiront au profit de la nuit ! Chaque jour, un art différent sera représenté, et plus de 30 artistes amateur-e-s et professionnel-le-s, de renommée locale à internationale, partagerons leurs oeuvres !
-        <!-- De Colin Horgan, créateur du jeu-vidéo indépendant "Lucah: Born of a
-        Dream", à Sullivan Le Postec, créateur de la websérie maintes fois
-        primée "Les Engagés", en passant par les sculptures et dessins de
-        Claire Gravelines, il y en aura pour tous les goûts ! -->
-      </p>
-
-      <div class="card-container">
-        <div class="cards">
-          <div class="card left-card">
-            <img src="./assets/video_games/lucah.gif" alt="song"  onclick="clickCarousel(event)">
-            <h3>Lucah 4</h3>
-          </div>
-          <div class="card middle-card">
-            <img src="./assets/video_games/lucah_1.gif" alt="song" onclick="clickCarousel(event)">
-            <h3>Lucah 1</h3>
-          </div>
-          <div class="card right-card">
-            <img src="./assets/video_games/lucah_2.gif" alt="song" onclick="clickCarousel(event)">
-            <h3>Lucah 2</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/video_games/lucah_3.gif" alt="song" onclick="clickCarousel(event)">
-            <h3>Lucah 3</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="planning">
-        <!-- <div class="stars">***</div> -->
-
-        <h3>--- Programme en Soirée ---</h3>
-
-        <div class="stars">***</div>
-
-        <h4> Lundi 2 mai ; 19h-23h</h4>
-        <p><em>(Salle Vitrine - Bâtiment Hédy Lamarre)</em></p>
-        <img src="./assets/icons/icons8-game-controller-100.png" class="planning-icon">
-        <p> Soirée Découverte de Jeux-Vidéo Queer Indépendants "TraceS" et "Lucah: Born of a Dream" avec les auteur-e-s</p>
-
-        <div class="stars">***</div>
-
-        <h4> Mardi 3 mai ; 19h-21h</h4>
-        <p><em>(Galerie des Humanités)</em></p>
-        <img src="./assets/icons/icons8-venus-de-milo-100.png" class="planning-icon">
-        <p>Vernissage de l’exposition "Amours Queer" avec l'artiste, Claire Gravelines</p>
-
-        <div class="stars">***</div>
-
-        <h4> Mercredi 4 mai ; 20h-21h30</h4>
-        <p><em>(Bibliothèque Marie Curie)</em></p>
-        <img src="./assets/icons/icons8-theatre-mask-100.png" class="planning-icon">
-        <p>Match d'Impro entre le Corpus Bang Bang et la Troupe Théâtrale de l'INSA.</p>
-
-        <div class="stars">***</div>
-
-        <h4> Jeudi 5 mai ; 20-23h</h4>
-        <p><em>(K-Fêt - Bâtiment Le Thélème)</em></p>
-        <img src="./assets/icons/icons8-imperial-mustache-100.png" class="planning-icon">
-        <p>Drag Show de folie avec 11 Kings & Queens</p>
-
-        <div class="stars">***</div>
-
-        <h4> Vendredi 6 mai ; 19-23h</h4>
-        <p><em>(Amphithéâtre Gaston Berger)</em></p>
-        <img src="./assets/icons/icons8-clapperboard-100.png" class="planning-icon">
-        <p>Projection de la web-série “Les Engagés” & temps d’échange avec le créateur et l’équipe.</p>
-
-        <div class="stars">***</div>
-    </div>
-
-  </div>
-</div>
-
-  <div class="diagonal-box bg-two">
-    <div class="content">
-      <h2>Des conférences scientifiques tous les midis !</h2>
-      <p>
-        Un cycle de conférences techniques & scientifiques sur le thème "Réseaux et Applis de Rencontre : Pirates en Eaux Troubles" viendra égayer vos journées, tous les jours à partir de 13h. Et pour aller jusqu'au bout du thème de pirate des mers de bits, toutes
-        les conférences auront lieu dans la Salle Vitrine du bâtiment Hedy Lamarr (Département Télécoms), territoire des Hackerz de l'INSA !
-      </p>
-
-
-      <div class="card-container">
-        <div class="cards">
-          <div class="card left-card">
-            <img src="./assets/conferences/jessica_pidoux.png" alt="song"  onclick="clickCarousel(event)">
-            <h3>Dr. Jessica Pidoux</h3>
-          </div>
-          <div class="card middle-card">
-            <img src="./assets/conferences/paul_louis_hery.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Paul-Louis Héry</h3>
-          </div>
-          <div class="card right-card">
-            <img src="./assets/conferences/benoit_renault.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Benoit Renault</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/conferences/wilfried_carbonnell.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Wilfried Carbonnell</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/conferences/virginie_mathivet.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Dr. Virginie Mathivet</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/conferences/clemence_abry_durand.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Clémence Abry-Durand</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/conferences/nino_andre_vinciane_mandrin.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Nino André </br> & Vinciane Mandrin</h3>
+        <div class="card-container">
+          <div class="cards">
+            <div class="card left-card">
+              <img src="./assets/bal/dj_pompompom.jpg" alt="song"  onclick="clickCarousel(event)">
+              <h3>DJ Pompompom</h3>
+            </div>
+            <div class="card middle-card">
+              <img src="./assets/bal/yanis.jpg" alt="song" onclick="clickCarousel(event)">
+              <h3>Yanis</h3>
+            </div>
+            <div class="card right-card">
+              <img src="./assets/bal/coeur.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Coeur</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/bal/rousse_errante.jpg" alt="song" onclick="clickCarousel(event)">
+              <h3>Rousse Errante</h3>
+            </div>
+            <!-- <div class="card hidden-card">
+              <img src="./assets/bal/animal_instinct.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Animal Instinct</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/bal/antoine_ami.png" alt="song" onclick="clickCarousel(event)">
+              <h3>Three Hours Later</h3>
+            </div>
+            <div class="card hidden-card">
+              <img src="./assets/bal/antoine_ami.png" alt="song" onclick="clickCarousel(event)">
+              <h3>K Le Son</h3>
+            </div> -->
           </div>
         </div>
-      </div>
 
-      <div class="planning">
-        <h3>--- Programme en Journée ---</h3>
-
-        <p><em>(Tous les jours en Salle Vitrine - Bâtiment Hédy Lamarre)</em></p>
-
-        <div class="stars">***</div>
-
-        <h4> Lundi 2 mai ; 13h-14h</h4>
-        <img src="./assets/icons/icons8-defense-100.png" class="planning-icon">
-        <p><em>Paul-Louis Héry et Benoit Renault</em></p>
-        <p>"Tinder, Grindr & co : Rétro-Ingénierie, Détournements, Dangers et Précautions"</p>
-
-        <div class="stars">***</div>
-
-        <h4> Mardi 2 mai ; 13h-14h</h4>
-        <img src="./assets/icons/icons8-defense-100.png" class="planning-icon">
-        <p><em>Wilfried Carbonnell</em></p>
-        <p>"BeTolerant : une application de rencontre et un réseau social respectueux"</p>
-
-        <div class="stars">***</div>
-
-        <h4> Mercredi 3 mai ; 13h-14h</h4>
-        <img src="./assets/icons/icons8-artificial-intelligence-100.png" class="planning-icon">
-        <p><em>Virginie Mathivet</em></p>
-        <p>"Jeux de données - biais et impacts sur les femmes dans un monde numérisé"</p>
-
-        <div class="stars">***</div>
-
-        <h4> Jeudi 4 mai ; 13h-15h30</h4>
-        <img src="./assets/icons/icons8-gender-100.png" class="planning-icon">
-        <p><em>Clémence Abry-Durand ; Nino André & Vinciane Mandrin</em></p>
-        <p>“Qu'est-ce que le genre fait aux sciences ?”
-        </br>
-          & Performance de "Posture(s)" avec temps d’échange avec les artistes
+        <p>
+          La soirée sera animée par la streameuse Rousse Errante, qui accueillera
+          avec son charisme légendaire sur scène les artistes qui illumineront
+          cette soirée :
+          <ul>
+            <li>Yanis - aussi Marraine du Bal</li>
+            <li>Coeur</li>
+            <li>DJ Pompompom</li>
+            <!-- <li>Animal Instinct</li> -->
+            <li>Et d'autres à découvrir...</li>
+          </ul>
         </p>
 
-        <div class="stars">***</div>
+        <!-- <p class="intro">
+          <a href="./bal-des-fiertes.html"> > Mais c'est trop bien, donne-moi tous les détails ! < </a>
+        </p> -->
 
-        <h4> Vendredi 5 mai ; 13h-14h</h4>
-        <img src="./assets/icons/icons8-tinder-500.png" class="planning-icon">
-        <p><em>Jessica Pidoux</em></p>
-        <p>"L’Amour sous algorithme"</p>
+        <!-- <div class="planning">
+          <h3>--- Programmation Artistique ---</h3>
 
-        <div class="stars">***</div>
+          <div class="stars">***</div>
+
+          <h4> La Marraine du Bal : Yanis </h4>
+          <p>
+            Brillante pépite de Saint-Étienne, Yanis est une des
+            premières artistes trans & non-binaire out dans la pop française,
+            de renommée internationale. Elle a accepté de nous faire
+            l'honneur d'être la marraine de ce premier Bal des Fiertés de Lyon !
+            Elle a percé en 2009 avec son single "Wake Up" sous le nom de scène
+            "Sliimy" et a depuis enchaîné les albums et collaborations internationales avec des
+            artistes de renom tels que Britney Spears, Katy Perry et les Black
+            Eyed Peas.
+
+          </p>
+
+          <div class="stars">***</div>
+
+          <h4> L'étoile montante : Coeur </h4>
+          <p>
+            Charlie Duran aka Coeur est une rappeuse et chanteuse lyonnaise en pleine montée.
+            Son style unique où rap, électro et pop s'assemblent en une ode féministe,
+            queer et inclusive qui saura certainement éclairer cette soirée !
+          </p>
+
+          <div class="stars">***</div>
+
+          <h4> L'astre underground : DJ Pompompom </h4>
+          <p>
+            Nous avons repéré Pamela aka DJ Pompompom lors d'une soirée de l'underground
+            queer lyonnais. Et on a tout de suite su que ses mix mêlant hip-hop, rap,
+            reggaeton, kizomba, dembow, afrobeat, seraient parfaits pour conclure le bal !
+          </p>
+
+          <div class="stars">***</div>
+        </div> -->
       </div>
     </div>
-  </div>
-  <div class="diagonal-box bg-three">
-    <div class="content">
-      <h2>On finit en beauté avec le Bal des Fiertés !</h2>
-      <p>
-      Le Festival s'achèvera par le premier Bal des Fiertés de Lyon, avec concert dansant,
-      repas, espace jeux, village associatif et un espace prévention ! À l'image du reste de la semaine,
-      le bal est un événement inclusif, ouvert à toustes, sans distinctions.
-      Comme dirait Lady Gaga :
-      </p>
-      <blockquote>
-          "No matter gay, straight, or bi', lesbian, transgender life
-          <br>
-          I'm on the right track, baby, I was born to survive
-          <br>
-          No matter Black, white or beige, chola, or Orient' made
-          <br>
-          I'm on the right track, baby, I was born to be brave"
-      </blockquote>
 
-      <p>
-        Alors mets ton plus beau costume de pirate, moussaillon-ne, et rejoins-nous !
-      </p>
+    <div class="diagonal-box bg-one">
+      <div class="content">
+        <h2>Une semaine de prévention & de sensibilisation</h2>
+        <p>
+          Au-delà d'une <b>sensibilisation aux questions de genre, amours et sexualités</b>
+          amenée par l'ensemble de la programmation, la SASS, c'est aussi une
+          semaine de <b>prévention autour de la santé sexuelle et des addictions</b>. Aussi :
+          <ul>
+            <li>
+              À chaque représentation artistique en soirée, une association de
+              prévention différente prendra la parole pour présenter ses activités,
+              et distribuer des supports d'information sur leurs thématiques,
+            </li>
+            <li>
+              À chaque événement seront distribués en <b>libre-service des préservatifs gratuits</b>,
+            </li>
+            <li>
+              <b>Il n'y aura d'alcool que lors du Drag Show</b> le jeudi soir à la K-Fêt, soirée à laquelle
+              seront aussi proposés des <b>autotests VIH gratuits</b>,
+            </li>
+            <li>
+              Finalement, lors du Bal des Fiertés du samedi, les différentes associations de prévention
+              présentes pendant la semaine seront conviées au village associatif.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
 
-      <p class="intro">
-        <a href="https://www.helloasso.com/associations/exit/evenements/ticket-pour-le-bal"> > Je réserve ma place au Bal des Fiertés ! < </a>
-      </p>
+    <div class="diagonal-box bg-two">
+      <div class="content">
+        <h2>La carte aux trésors pour se retrouver</h2>
+        <img src="./assets/plan/plan.png" class="plan">
+      </div>
+    </div>
+    <div class="clip-path">
+      <div class="content">
+        <div class="exit">
+          <h2>Un festival proposé par EXIT</h2>
 
-      <div class="card-container">
-        <div class="cards">
-          <div class="card left-card">
-            <img src="./assets/bal/dj_pompompom.jpg" alt="song"  onclick="clickCarousel(event)">
-            <h3>DJ Pompompom</h3>
-          </div>
-          <div class="card middle-card">
-            <img src="./assets/bal/yanis.jpg" alt="song" onclick="clickCarousel(event)">
-            <h3>Yanis</h3>
-          </div>
-          <div class="card right-card">
-            <img src="./assets/bal/coeur.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Coeur</h3>
-          </div>
-          <!-- <div class="card hidden-card">
-            <img src="./assets/bal/rousse_errante.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Rousse Errante</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/bal/animal_instinct.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Animal Instinct</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/bal/antoine_ami.png" alt="song" onclick="clickCarousel(event)">
-            <h3>Antoine AMI</h3>
-          </div>
-          <div class="card hidden-card">
-            <img src="./assets/bal/antoine_ami.png" alt="song" onclick="clickCarousel(event)">
-            <h3>K Le Son</h3>
-          </div> -->
+          <p>L'association LGBT+ de l'INSA Lyon</p>
+
+          <img id="exit-logo" src="./assets/logos/exit/2019_rond.png">
+        </div>
+
+        <div class="partners">
+          <h2>Nos partenaires</h2>
+          <p>
+            Ce festival ne pourrait pas avoir lieux sans de nombreux partenaires institutionnels, associatifs et individuels.
+            Nous nous attachons ici à les remercier, en première page, à la vue de toustes.
+          </p>
+
+          <h3>Institutions</h3>
+            <div class="logos">
+              <img src="./assets/logos/institutions/insa_white.png" class="logo">
+              <img src="./assets/logos/institutions/va_white.png" class="logo">
+              <img src="./assets/logos/institutions/fondation_insa_lyon_white.png" class="logo">
+              <img src="./assets/logos/institutions/alumni_insa_lyon_white.png" class="logo">
+              <img src="./assets/logos/institutions/crous_lyon_white.png" class="logo">
+              <img src="./assets/logos/institutions/villeurbanne_white.png" class="logo">
+            </div>
+          <h3>Associations</h3>
+            <!-- Assos Extérieures -->
+            <div class="logos">
+              <img src="./assets/logos/assos_autres/nextgaymer.png" class="logo">
+              <img src="./assets/logos/assos_autres/cfl.png" class="logo">
+              <img src="./assets/logos/assos_autres/aides.png" class="logo">
+              <img src="./assets/logos/assos_autres/frisse.png" class="logo">
+              <img src="./assets/logos/assos_autres/la_fabric_art.png" class="logo">
+              <img src="./assets/logos/assos_autres/spi_69gaules.png" class="logo">
+            </div>
+            <!-- Assos INSA -->
+            <div class="logos">
+              <img src="./assets/logos/assos_insa/tti.png" class="logo">
+              <img src="./assets/logos/assos_insa/clubelek.png" class="logo">
+              <img src="./assets/logos/assos_insa/cinelamouette.png" class="logo">
+              <img src="./assets/logos/assos_insa/kls.png" class="logo">
+              <!-- <img src="./assets/logos/assos_insa/cluji.png" class="logo"> -->
+              <img src="./assets/logos/assos_insa/ami.png" class="logo">
+              <img src="./assets/logos/assos_insa/club_rock.png" class="logo">
+              <img src="./assets/logos/assos_insa/slide.png" class="logo">
+              <img src="./assets/logos/assos_insa/sangculottes.png" class="logo">
+              <img src="./assets/logos/assos_insa/culinarium.png" class="logo">
+              <img src="./assets/logos/assos_insa/lezarts.png" class="logo">
+              <img src="./assets/logos/assos_insa/gatsun.png" class="logo">
+              <!-- <img src="./assets/logos/assos_insa/insaesport.png" class="logo"> -->
+              <img src="./assets/logos/assos_insa/kfet.png" class="logo">
+              <img src="./assets/logos/assos_insa/insatiable.png" class="logo">
+            </div>
         </div>
       </div>
-
-      <p>
-        La soirée sera animée par la streameuse Rousse Errante, qui accueillera
-        avec son charisme légendaire sur scène les artistes qui illumineront
-        cette soirée :
-        <ul>
-          <li>Yanis - aussi Marraine du Bal</li>
-          <li>Coeur</li>
-          <li>DJ Pompompom</li>
-          <!-- <li>Animal Instinct</li> -->
-          <li>Et d'autres à découvrir...</li>
-        </ul>
-      </p>
-
-      <p class="intro">
-        <a href="./bal-des-fiertes.html" > Mais c'est trop bien, donne-moi tous les détails ! < </a>
-      </p>
-      <!-- <div class="planning">
-        <h3>--- Programmation Artistique ---</h3>
-
-        <div class="stars">***</div>
-
-        <h4> La Marraine du Bal : Yanis </h4>
-        <p>
-          Brillante pépite de Saint-Étienne, Yanis est une des
-          premières artistes trans & non-binaire out dans la pop française,
-          de renommée internationale. Elle a accepté de nous faire
-          l'honneur d'être la marraine de ce premier Bal des Fiertés de Lyon !
-          Elle a percé en 2009 avec son single "Wake Up" sous le nom de scène
-          "Sliimy" et a depuis enchaîné les albums et collaborations internationales avec des
-          artistes de renom tels que Britney Spears, Katy Perry et les Black
-          Eyed Peas.
-
-        </p>
-
-        <div class="stars">***</div>
-
-        <h4> L'étoile montante : Coeur </h4>
-        <p>
-          Charlie Duran aka Coeur est une rappeuse et chanteuse lyonnaise en pleine montée.
-          Son style unique où rap, électro et pop s'assemblent en une ode féministe,
-          queer et inclusive qui saura certainement éclairer cette soirée !
-        </p>
-
-        <div class="stars">***</div>
-
-        <h4> L'astre underground : DJ Pompompom </h4>
-        <p>
-          Nous avons repéré Pamela aka DJ Pompompom lors d'une soirée de l'underground
-          queer lyonnais. Et on a tout de suite su que ses mix mêlant hip-hop, rap,
-          reggaeton, kizomba, dembow, afrobeat, seraient parfaits pour conclure le bal !
-        </p>
-
-        <div class="stars">***</div>
-      </div> -->
     </div>
-  </div>
 
-  <div class="diagonal-box bg-one">
-    <div class="content">
-      <h2>Une semaine de prévention & de sensibilisation</h2>
-      <p>
-        Au-delà d'une <b>sensibilisation aux questions de genre, amours et sexualités</b>
-        amenée par l'ensemble de la programmation, la SASS, c'est aussi une
-        semaine de <b>prévention autour de la santé sexuelle et des addictions</b>. Aussi :
-        <ul>
-          <li>
-            À chaque représentation artistique en soirée, une association de
-            prévention différente prendra la parole pour présenter ses activités,
-            et distribuer des supports d'information sur leurs thématiques,
-          </li>
-          <li>
-            À chaque événement seront distribués en <b>libre-service des préservatifs gratuits</b>,
-          </li>
-          <li>
-            <b>Il n'y aura d'alcool que lors du Drag Show</b> le jeudi soir à la K-Fêt, soirée à laquelle
-            seront aussi proposés des <b>autotests VIH gratuits</b>,
-          </li>
-          <li>
-            Finalement, lors du Bal des Fiertés du samedi, les différentes associations de prévention
-            présentes pendant la semaine seront conviées au village associatif.
-          </li>
-        </ul>
-      </p>
-    </div>
-  </div>
-
-  <div class="diagonal-box bg-two">
-    <div class="content">
-      <h2>La carte aux trésors pour se retrouver</h2>
-      <img src="./assets/plan/plan.png" class="plan">
-    </div>
-  </div>
-  <div class="clip-path">
-    <div class="content">
-      <h2>Nos partenaires</h2>
-      <p>
-        Ce festival ne pourrait pas avoir lieux sans de nombreux partenaires institutionnels, associatifs et individuels.
-        Nous nous attachons ici à les remercier, en première page, à la vue de toustes.
-      </p>
-
-      <div class="partners">
-        <h3>Institutions</h3>
-        <h3>Associations</h3>
-        <h3>Remerciements individuels</h3>
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/exit_lyon/"><img src="./assets/icons/icons8-instagram.svg" alt="Compte Instagram d'EXIT" class="social-icon"></a>
+        <a href="https://twitter.com/Exit_Lyon"><img src="./assets/icons/icons8-twitter-circled.svg" alt="Compte Twitter d'EXIT" class="social-icon"></a>
+        <a href="https://fr-fr.facebook.com/exit.lyon"><img src="./assets/icons/icons8-facebook.svg" alt="Compte Facebook d'EXIT" class="social-icon"></a>
       </div>
-    </div>
-  </div>
+      <p>
+        Copyright &copy; EXIT
+      </p>
+    </footer>
 
-  <footer>
-    <div class="socials">
-      <a href="https://www.instagram.com/exit_lyon/"><img src="./assets/icons/icons8-instagram.svg" alt="Compte Instagram d'EXIT" class="social-icon"></a>
-      <a href="https://twitter.com/Exit_Lyon"><img src="./assets/icons/icons8-twitter-circled.svg" alt="Compte Twitter d'EXIT" class="social-icon"></a>
-      <a href="https://fr-fr.facebook.com/exit.lyon"><img src="./assets/icons/icons8-facebook.svg" alt="Compte Facebook d'EXIT" class="social-icon"></a>
-    </div>
-    <p>
-      Copyright &copy; EXIT
-    </p>
-  </footer>
+    <script src="./js/script.js"></script>
 
-  <script src="./js/script.js"></script>
+  </body>
 
-</body>
-
-</html>
+  </html>
