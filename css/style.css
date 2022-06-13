@@ -489,3 +489,15 @@ footer {
   height: 100px;
   margin: 25px;
 }
+
+#cfc2022 {
+  height: 200px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#cfc2022_financeurs {
+  width:100%;
+  margin-top: 50px;
+}
