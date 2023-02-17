@@ -11,6 +11,10 @@
       ------------------*/
   --magic-number: 0.043744331765;
   --skew-padding: calc(var(--width) * var(--magic-number));
+  --background-1: #4a2a96;
+  --background-2: #a587c7;
+  --background-3: #0a736f;
+  --background-4: #0b0d26;
 }
 
 /* fonts google font et open font library */
@@ -24,7 +28,7 @@
 }
 
 body {
-  background: #acfdff; /* condition : the first and last diagonal divs are the same color */
+  background: var(--background-1); /* condition : the first and last diagonal divs are the same color */
   margin: 0;
   color: #fef6eb;
 }
@@ -39,14 +43,32 @@ h2 {
   margin-top: 0;
 }
 
-h3 {
+.card h3 {
   font-size: 2em;
   margin-top: 0;
+  transform: skewy(var(--angle));
+}
+
+.card h4 {
+  font-size: 1.5em;
+  margin: 0;
+  transform: skewy(var(--angle));
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0.5em 0;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 1.5em;
-  margin: 0;
+  margin: 0 0 0.5em;
+  font-weight: 200;
+}
+
+.card p {
+  transform: skewy(var(--angle));
 }
 
 header {
@@ -77,7 +99,7 @@ nav a,
 
 nav a:hover,
 .dropdown-content a:hover {
-  color: #383736;
+  color: #000000;
 }
 
 .dropdown {
@@ -113,7 +135,7 @@ nav a:hover,
 }
 
 .dropdown:hover .btn-dropdown {
-  color: #383736;
+  color: #000000;
 }
 
 .big-wrapper {
@@ -138,13 +160,13 @@ nav a:hover,
 }
 
 .bg:nth-child(1)::before {
-  background-image: linear-gradient(180deg, #acfdff, #0a736f);
+  background-image: linear-gradient(180deg, var(--background-1), var(--background-2));
 }
 .bg:nth-child(2)::before {
-  background-image: linear-gradient(0deg, #3c165b, #221c53);
+  background-image: linear-gradient(0deg, var(--background-3), var(--background-4));
 }
 .bg:nth-child(3)::before {
-  background-image: linear-gradient(0deg, #acfdff, #0a736f);
+  background-image: linear-gradient(0deg, var(--background-1), var(--background-2));
 }
 
 .diag {
@@ -201,52 +223,106 @@ nav a:hover,
   transition: all 200ms;
   /* min-height: 240px; */
   background-size: cover;
-  border-radius: 10px;
-  box-shadow: 1px 1px 16px black;
+  /* border-radius: 10px; */
+  /* box-shadow: 1px 1px 16px black; */
 }
 
-.night-calendar > .card:nth-child(1) {
-  background-image: url("./assets/Nuit-Rouge.png");
-}
-.night-calendar > .card:nth-child(2) {
-  background-image: url("./assets/Nuit-Orange.png");
-}
-.night-calendar > .card:nth-child(3) {
-  background-image: url("./assets/Nuit-Jaune.png");
-}
-.night-calendar > .card:nth-child(4) {
-  background-image: url("./assets/Nuit-Vert.png");
-}
-.night-calendar > .card:nth-child(5) {
-  background-image: url("./assets/Nuit-Bleu.png");
-}
-.night-calendar > .card:nth-child(6) {
-  background-image: url("./assets/Nuit-Violet.png");
+.card::before {
+  z-index: -1;
 }
 
-.day-calendar > .card:nth-child(1) {
-  background-image: url("./assets/Jour-Rouge.png");
+.night-calendar > .card:nth-child(1)::before {
+  background-image: url("./assets/backgrounds/Nuit-Rouge.png");
 }
-.day-calendar > .card:nth-child(2) {
-  background-image: url("./assets/Jour-Orange.png");
+.night-calendar > .card:nth-child(2)::before {
+  background-image: url("./assets/backgrounds/Nuit-Orange.png");
 }
-.day-calendar > .card:nth-child(3) {
-  background-image: url("./assets/Jour-Jaune.png");
+.night-calendar > .card:nth-child(3)::before {
+  background-image: url("./assets/backgrounds/Nuit-Jaune.png");
 }
-.day-calendar > .card:nth-child(4) {
-  background-image: url("./assets/Jour-Vert.png");
+.night-calendar > .card:nth-child(4)::before {
+  background-image: url("./assets/backgrounds/Nuit-Vert.png");
 }
-.day-calendar > .card:nth-child(5) {
-  background-image: url("./assets/Jour-Bleu.png");
+.night-calendar > .card:nth-child(5)::before {
+  background-image: url("./assets/backgrounds/Nuit-Bleu.png");
 }
-.day-calendar > .card:nth-child(6) {
-  background-image: url("./assets/Jour-Violet.png");
+.night-calendar > .card:nth-child(6)::before {
+  background-image: url("./assets/backgrounds/Nuit-Violet.png");
+}
+
+.day-calendar > .card:nth-child(1)::before {
+  background-image: url("./assets/backgrounds/Jour-Rouge.png");
+}
+.day-calendar > .card:nth-child(2)::before {
+  background-image: url("./assets/backgrounds/Jour-Orange.png");
+}
+.day-calendar > .card:nth-child(3)::before {
+  background-image: url("./assets/backgrounds/Jour-Jaune.png");
+}
+.day-calendar > .card:nth-child(4)::before {
+  background-image: url("./assets/backgrounds/Jour-Vert.png");
+}
+.day-calendar > .card:nth-child(5)::before {
+  background-image: url("./assets/backgrounds/Jour-Bleu.png");
+}
+.day-calendar > .card:nth-child(6)::before {
+  background-image: url("./assets/backgrounds/Jour-Violet.png");
 }
 
 .card:hover {
   transform: scale(110%);
   transition: all 200ms;
   cursor: pointer;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  margin: 25px;
+}
+
+#cfc2022 {
+  height: 200px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#cfc2022_financeurs {
+  width:100%;
+  margin-top: 50px;
+}
+
+#logo-volvo {
+  height: 26px;
+  margin: 37px;
+}
+
+.social-icon {
+  height: 3rem;
+  margin: 1rem;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+p a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 90%, 0, #fef6eb 100%);
+  padding: 0.125em 0;
+  transition: opacity 0.3s ease-out;
+}
+p a:hover {
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 p {
@@ -258,8 +334,7 @@ p.hour {
   font-style: italic;
 }
 
-@media screen and (max-device-width: 480px),
-  (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-device-width: 480px) {
   h1 {
     font-size: 4em;
   }
