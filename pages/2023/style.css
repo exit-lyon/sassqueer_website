@@ -1,0 +1,305 @@
+/* produced by Benoit Renault, thanks ^^ */
+:root {
+  --width: 100vw;
+  --full-width: 100vw;
+  --angle: -5deg;
+  /*-----------------
+      Magic Number Alert:
+      the 0.09719 is calculated by this formula:
+      tan(11°) / 2
+      11° is the current skewY value.
+      ------------------*/
+  --magic-number: 0.043744331765;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+}
+
+/* fonts google font et open font library */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background: #acfdff; /* condition : the first and last diagonal divs are the same color */
+  margin: 0;
+  color: #fef6eb;
+}
+
+h1 {
+  font-size: 5em;
+  transform: skewy(var(--angle));
+}
+
+h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1vw;
+}
+
+#nav-logo {
+  width: 5em;
+  margin: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 1vw;
+  margin-top: 12px;
+}
+
+nav a,
+.dropdown-content a {
+  text-decoration: none;
+  color: #fef6eb;
+  font-size: 1.25em;
+  height: fit-content;
+}
+
+nav a:hover,
+.dropdown-content a:hover {
+  color: #383736;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-dropdown {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: #fef6eb;
+  font-size: 1.25em;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  position: absolute;
+  margin-top: 1.75em;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown:hover .btn-dropdown {
+  color: #383736;
+}
+
+.big-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  width: 100vw;
+  max-width: 100%;
+  height: fit-content;
+}
+
+.content {
+  max-width: var(--width);
+  width: 80vw;
+  margin: 0 auto;
+  padding: 1.5em;
+  position: relative;
+}
+
+.bg:nth-child(1)::before {
+  background-image: linear-gradient(180deg, #acfdff, #0a736f);
+}
+.bg:nth-child(2)::before {
+  background-image: linear-gradient(0deg, #3c165b, #221c53);
+}
+.bg:nth-child(3)::before {
+  background-image: linear-gradient(0deg, #acfdff, #0a736f);
+}
+
+.diag {
+  position: relative;
+  padding: var(--skew-padding) 0;
+  margin-top: -1px;
+}
+
+.diag:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewy(var(--angle));
+  transform-origin: 50% 0;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+}
+
+.content {
+  display: block;
+  position: relative;
+}
+
+.parallax {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax-img {
+  position: fixed;
+  left: 100px;
+  top: 50%;
+  z-index: 2;
+}
+
+.night-calendar,
+.day-calendar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+}
+
+.card {
+  padding: 10px;
+  width: 13.5vw;
+  /* border: #073232 3px solid; */
+  transform: scale(100%);
+  transition: all 200ms;
+  /* min-height: 240px; */
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 1px 1px 16px black;
+}
+
+.night-calendar > .card:nth-child(1) {
+  background-image: url("./assets/Nuit-Rouge.png");
+}
+.night-calendar > .card:nth-child(2) {
+  background-image: url("./assets/Nuit-Orange.png");
+}
+.night-calendar > .card:nth-child(3) {
+  background-image: url("./assets/Nuit-Jaune.png");
+}
+.night-calendar > .card:nth-child(4) {
+  background-image: url("./assets/Nuit-Vert.png");
+}
+.night-calendar > .card:nth-child(5) {
+  background-image: url("./assets/Nuit-Bleu.png");
+}
+.night-calendar > .card:nth-child(6) {
+  background-image: url("./assets/Nuit-Violet.png");
+}
+
+.day-calendar > .card:nth-child(1) {
+  background-image: url("./assets/Jour-Rouge.png");
+}
+.day-calendar > .card:nth-child(2) {
+  background-image: url("./assets/Jour-Orange.png");
+}
+.day-calendar > .card:nth-child(3) {
+  background-image: url("./assets/Jour-Jaune.png");
+}
+.day-calendar > .card:nth-child(4) {
+  background-image: url("./assets/Jour-Vert.png");
+}
+.day-calendar > .card:nth-child(5) {
+  background-image: url("./assets/Jour-Bleu.png");
+}
+.day-calendar > .card:nth-child(6) {
+  background-image: url("./assets/Jour-Violet.png");
+}
+
+.card:hover {
+  transform: scale(110%);
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+p.hour {
+  margin: 10px 0;
+  font-style: italic;
+}
+
+@media screen and (max-device-width: 480px),
+  (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  #nav-logo {
+    width: 4em;
+    margin: 12px;
+  }
+
+  .night-calendar,
+  .day-calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .parallax {
+    display: none;
+  }
+
+  nav a,
+  .dropdown-content a,
+  .btn-dropdown {
+    font-size: medium;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .content {
+    width: auto;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .dropdown-content {
+    align-items: center;
+    margin-top: 60px;
+  }
+}
