@@ -43,13 +43,13 @@ h2 {
   margin: 0;
 }
 
-.card h3 {
+.cal-card h3 {
   font-size: 2em;
   margin-top: 0;
   transform: skewy(var(--angle));
 }
 
-.card h4 {
+.cal-card h4 {
   font-size: 1.5em;
   margin: 0;
   transform: skewy(var(--angle));
@@ -67,7 +67,7 @@ h4 {
   font-weight: 200;
 }
 
-.card p {
+.cal-card p {
   transform: skewy(var(--angle));
 }
 
@@ -220,7 +220,7 @@ h3.subtitle {
   margin-top: 3em;
 }
 
-.card {
+.cal-card {
   padding: 10px;
   width: 15em;
   transform: scale(100%);
@@ -229,49 +229,49 @@ h3.subtitle {
   text-shadow: 1px 1px black;
 }
 
-.card::before {
+.cal-card::before {
   z-index: -1;
 }
 
-.night-calendar > .card:nth-child(1)::before {
+.night-calendar > .cal-card:nth-child(1)::before {
   background-image: url("./assets/backgrounds/Nuit-Rouge.png");
 }
-.night-calendar > .card:nth-child(2)::before {
+.night-calendar > .cal-card:nth-child(2)::before {
   background-image: url("./assets/backgrounds/Nuit-Orange.png");
 }
-.night-calendar > .card:nth-child(3)::before {
+.night-calendar > .cal-card:nth-child(3)::before {
   background-image: url("./assets/backgrounds/Nuit-Jaune.png");
 }
-.night-calendar > .card:nth-child(4)::before {
+.night-calendar > .cal-card:nth-child(4)::before {
   background-image: url("./assets/backgrounds/Nuit-Vert.png");
 }
-.night-calendar > .card:nth-child(5)::before {
+.night-calendar > .cal-card:nth-child(5)::before {
   background-image: url("./assets/backgrounds/Nuit-Bleu.png");
 }
-.night-calendar > .card:nth-child(6)::before {
+.night-calendar > .cal-card:nth-child(6)::before {
   background-image: url("./assets/backgrounds/Nuit-Violet.png");
 }
 
-.day-calendar > .card:nth-child(1)::before {
+.day-calendar > .cal-card:nth-child(1)::before {
   background-image: url("./assets/backgrounds/Jour-Rouge.png");
 }
-.day-calendar > .card:nth-child(2)::before {
+.day-calendar > .cal-card:nth-child(2)::before {
   background-image: url("./assets/backgrounds/Jour-Orange.png");
 }
-.day-calendar > .card:nth-child(3)::before {
+.day-calendar > .cal-card:nth-child(3)::before {
   background-image: url("./assets/backgrounds/Jour-Jaune.png");
 }
-.day-calendar > .card:nth-child(4)::before {
+.day-calendar > .cal-card:nth-child(4)::before {
   background-image: url("./assets/backgrounds/Jour-Vert.png");
 }
-.day-calendar > .card:nth-child(5)::before {
+.day-calendar > .cal-card:nth-child(5)::before {
   background-image: url("./assets/backgrounds/Jour-Bleu.png");
 }
-.day-calendar > .card:nth-child(6)::before {
+.day-calendar > .cal-card:nth-child(6)::before {
   background-image: url("./assets/backgrounds/Jour-Violet.png");
 }
 
-.card:hover {
+.cal-card:hover {
   transform: scale(110%);
   transition: all 200ms;
   cursor: pointer;
@@ -352,9 +352,106 @@ p.hour {
   font-style: italic;
 }
 
+a.cal-link {
+  all: unset;
+}
+
+/***************************************/
+.card-container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.card {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card p {
+  font-style: italic;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.left-card {
+  display: block;
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.left-card p {
+  display: none;
+}
+
+.right-card {
+  display: block;
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.right-card p {
+  display: none;
+}
+
+.middle-card {
+  display: block;
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.middle-card p {
+  display: block;
+}
+
+.hidden-card {
+  display: none;
+}
+
+.hidden-card p {
+  display: none;
+}
+/*************************************************/
+
 @media screen and (max-device-width: 480px) {
   h1 {
-    font-size: 4em;
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
   }
 
   #nav-logo {
@@ -375,13 +472,14 @@ p.hour {
     font-size: medium;
   }
 
-  .card {
+  .cal-card {
     width: 100%;
     aspect-ratio: 2;
   }
 
   .content {
     width: auto;
+    overflow: hidden;
   }
 
   .content > p {
