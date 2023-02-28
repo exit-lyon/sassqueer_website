@@ -13,7 +13,7 @@
     <header>
         <a href="https://sassqueer.fr"><img id="nav-logo" src="./assets/logos/exit/2019_rond.png" alt="Logo d'Exit"></a>
         <nav>
-            <a href="https://www.example.com">Les conférences</a>
+            <a href="pages/conferences.html">Les conférences</a>
             <div class="dropdown">
                 <button class="btn-dropdown">Les événements artistiques</button>
                 <div class="dropdown-content">
@@ -27,16 +27,18 @@
         </nav>
     </header>
     <main>
-        
+
         <img id="main-image" src="assets/fonds/fond.png" alt="">
         <div class="big-wrapper">
-            <!-- <div class="bg diag">
-                <div class="content main-title">
-                    <h1>Semaine des Arts et Sciences Queer !</h1>
-                </div>
-            </div> -->
             <div class="bg diag bg-two">
                 <div class="content">
+                    <h3 class="italic">La Semaine des Arts et Sciences Queer revient en 2023 pour sa
+                        deuxième édition du 27 au 31 mars !</h3>
+                    <p>La SASS, c'est une semaine de conférences scientifiques et d'événements artistiques dédiée à la
+                        culture Queer, sur le campus de la Doua à Villeurbanne. Tous les événements sont ouverts à
+                        toutes et à tous, et sont gratuits. Que vous soyiez intéressés par une conférence, une soirée,
+                        les deux ou tous les événements, passez nous voir !</p>
+                        <p> <br> *** </p>
                     <h2>Des événements artistiques tous les soirs !</h2>
                     <p>Tous les soirs de la semaine, les artistes viendront colorer vos nuits ! Du drag show au match
                         d'impro, les événements sont ouverts à toutes et à tous, dans une ambiance safe pour toustes.
@@ -73,11 +75,12 @@
                             </a>
                         </div>
                         <div class="cal-card diag">
-                            <a href="pages/exposition.html">
+                            <a href="#">
                                 <h4>Mardi 28 mars</h4>
                                 <p class="hour">19h00 - Hall de la BMC</p>
                                 <h3>Vernissage de l'exposition</h3>
                                 <p>Avec Aurélie Rivierez et Llana Cavalini</p>
+                                <p class="unsure">Plus de précisions à venir !</p>
                             </a>
                         </div>
                         <div class="cal-card diag">
@@ -89,11 +92,12 @@
                             </a>
                         </div>
                         <div class="cal-card diag">
-                            <a href="pages/drag-show.html">
+                            <a href="#">
                                 <h4>Jeudi 30 mars</h4>
                                 <p class="hour">22h00 - K-Fêt</p>
                                 <h3>Drag Show</h3>
                                 <p>Avec plein d'artistes formidables</p>
+                                <p class="unsure">Plus de précisions à venir !</p>
                             </a>
                         </div>
                         <div class="cal-card diag">
@@ -112,7 +116,8 @@
                     <h2>Des conférences scientifiques tous les midis !</h2>
                     <p>Tous les jours à 13h, le cycle de conférences illumine votre pause tout en vous élevant
                         intellectuellement ! <br>Toutes les conférences auront lieu dans la Salle Vitrine du bâtiment
-                        Hedy Lamarr (Département Télécoms)</p>
+                        Hedy Lamarr (Département Télécoms). Les conférences sont toutes gratuites, et ouvertes à toustes
+                        bien sûr !</p>
 
                     <div class="card-container">
                         <div class="cards">
@@ -129,74 +134,87 @@
                                 <img src="./assets/conferences/plenet.jpg" alt="song" onclick="clickCarousel(event)">
                                 <p>Sandrine Plenet</p>
                             </div>
+                            <div class="card hidden-card">
+                                <img src="./assets/conferences/john_samuel.jpg" alt="song"
+                                    onclick="clickCarousel(event)">
+                                <p>John Samuel</p>
+                            </div>
                             <!-- <div class="card hidden-card">
-                                <img src="./assets/dragshow/gf.jpg" alt="song" onclick="clickCarousel(event)">
-                                <p>Drag Show</p>
-                              </div> -->
+                                    <img src="./assets/dragshow/gf.jpg" alt="song" onclick="clickCarousel(event)">
+                                    <p>Drag Show</p>
+                                </div> -->
                         </div>
                     </div>
                     <h3>--- Programme en Journée ---</h3>
+                    <p>Cliquez sur les cartes pour obtenir plus d'informations sur les intervenants !</p>
                     <div class="day-calendar">
-                        <div class="cal-card diag">
-                            <h4>Lundi 27 mars</h4>
-                            <p class="hour">12h30 - 14h00</p>
-                            <h3>Quel habitat pour les seniors LGBT+ ?</h3>
-                            <p>Anne Labit et Romain Vacquier</p>
-                        </div>
-                        <div class="cal-card diag">
+                        <a href="pages/conferences.html#lundi">
+                            <div class="cal-card diag">
+                                <h4>Lundi 27 mars</h4>
+                                <p class="hour">12h30 - 14h00</p>
+                                <h3>Quel habitat pour les seniors LGBT+ ?</h3>
+                                <p>Anne Labit et Romain Vacquier</p>
+                        </a>
+                    </div>
+                    <div class="cal-card diag">
+                        <a href="pages/conferences.html#mardi">
                             <h4>Mardi 28 mars</h4>
                             <p class="hour">12h30 - 14h00</p>
-                            <h3>Transidentités et transexuation: qu'est ce que le sexe ?</h3>
+                            <h3>Transidentités et intersexuation : qu'est ce que le sexe ?</h3>
                             <p>Sandrine Plenet</p>
-                        </div>
-                        <div class="cal-card diag">
+                        </a>
+                    </div>
+                    <div class="cal-card diag">
+                        <a href="pages/conferences.html#mercredi">
                             <h4>Mercredi 29 mars</h4>
                             <p class="hour">12h30 - 14h00</p>
-                            <h3>Vulgarisation génétique</h3>
-                            <p>Marine alias GenetixVideos</p>
+                            <h3>Documentation des histoires queers sur Wikipédia et Wikidata</h3>
+                            <p>John Samuel</p>
                             <p class="unsure">En cours de validation</p>
-                        </div>
-                        <div class="cal-card diag">
-                            <h4>Jeudi 30 mars</h4>
-                            <p class="hour">12h30 - 14h30</p>
-                            <h3>Table ronde sur l'inclusivité dans les entreprises</h3>
-                            <p>L'autre cercle</p>
-                            <p class="unsure">En cours de validation</p>
-                        </div>
-                        <div class="cal-card diag">
-                            <h4>Vendredi 31 mars</h4>
-                            <p class="hour">12h30 - 14h00</p>
-                            <h3>Mastodon et les réseaux sociaux queers</h3>
-                            <p>Angie Gaudion - Framasoft</p>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="cal-card diag">
+                        <h4>Jeudi 30 mars</h4>
+                        <p class="hour">12h30 - 14h30</p>
+                        <h3>Table ronde sur l'inclusivité dans les entreprises</h3>
+                        <p>L'autre cercle</p>
+                        <p class="unsure">En cours de validation</p>
+                    </div>
+                    <div class="cal-card diag">
+                        <h4>Vendredi 31 mars</h4>
+                        <p class="hour">12h30 - 14h00</p>
+                        <h3>Mastodon et les réseaux sociaux queers</h3>
+                        <p>Angie Gaudion - Framasoft</p>
+                        <p class="unsure">Plus de précisions à venir !</p>
                     </div>
                 </div>
             </div>
-            <div class="bg diag bg-two">
-                <div class="content">
-                    <h2>Une semaine de prévention & de sensibilisation</h2>
-                    <p>
-                        Au-delà d'une <b>sensibilisation aux questions de genre, amours et sexualités</b>
-                        amenée par l'ensemble de la programmation, la SASS, c'est aussi une
-                        semaine de <b>prévention autour de la santé sexuelle et des addictions</b>. Aussi :
-                    <ul>
-                        <li>
-                            À chaque représentation artistique en soirée, une association de
-                            prévention différente prendra la parole pour présenter ses activités,
-                            et distribuer des supports d'information sur leurs thématiques,
-                        </li>
-                        <li>
-                            À chaque événement seront distribués en <b>libre-service des préservatifs gratuits</b>,
-                        </li>
-                        <li>
-                            <b>Il n'y aura d'alcool que lors du Drag Show</b> le jeudi soir à la K-Fêt, soirée à
-                            laquelle
-                            seront aussi proposés des <b>autotests VIH gratuits</b>,
-                        </li>
-                    </ul>
-                    </p>
-                </div>
+        </div>
+        <div class="bg diag bg-two">
+            <div class="content">
+                <h2>Une semaine de prévention & de sensibilisation</h2>
+                <p>
+                    Au-delà d'une <b>sensibilisation aux questions de genre, amours et sexualités</b>
+                    amenée par l'ensemble de la programmation, la SASS, c'est aussi une
+                    semaine de <b>prévention autour de la santé sexuelle et des addictions</b>. Aussi :
+                <ul>
+                    <li>
+                        À chaque représentation artistique en soirée, une association de
+                        prévention différente prendra la parole pour présenter ses activités,
+                        et distribuer des supports d'information sur leurs thématiques,
+                    </li>
+                    <li>
+                        À chaque événement seront distribués en <b>libre-service des préservatifs gratuits</b>,
+                    </li>
+                    <li>
+                        <b>Il n'y aura d'alcool que lors du Drag Show</b> le jeudi soir à la K-Fêt, soirée à
+                        laquelle
+                        seront aussi proposés des <b>autotests VIH gratuits</b>,
+                    </li>
+                </ul>
+                </p>
             </div>
+        </div>
         </div>
     </main>
 
@@ -276,7 +294,8 @@
                     <!-- <img src="./assets/logos/assos_insa/insatiable.png" class="logo"> -->
                 </div>
 
-                <h3>La première édition de l'événement a bénéficié du label  "Villeurbanne 2022, capitale française de la culture"</h3>
+                <h3>La première édition de l'événement a bénéficié du label "Villeurbanne 2022, capitale française de la
+                    culture"</h3>
 
                 <img src="./assets/logos/cfc2022/VCFC22_Logo_Principal_Brush_RVB.png" id="cfc2022">
 
@@ -309,7 +328,7 @@
 
             <div class="stars">***</div>
 
-            <p>
+            <!-- <p>
                 Envie de communiquer sur le festival ?
                 <br />
                 Ou bien juste d'avoir plus de détails sur toutes les activités proposées ?
@@ -328,7 +347,7 @@
                 et <a
                     href="https://drive.google.com/drive/folders/1GAghRY2EOEmY0cRjv86ArCUPC-1hHfbZ?usp=sharing">flyers</a>
                 !
-            </p>
+            </p> -->
 
             <div class="socials">
                 <a href="https://www.instagram.com/exit_lyon/"><img src="./assets/icons/icons8-instagram.svg"
