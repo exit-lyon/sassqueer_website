@@ -306,8 +306,7 @@ h3.subtitle {
 
 .unsure {
   font-size: 1em;
-  color: #ff7b7b;
-  text-shadow: 1px 1px 1px rgb(61, 0, 0);
+  font-style: italic;
 }
 
 .logos {
@@ -351,6 +350,14 @@ a {
 .content > p {
   max-width: 60%;
   text-align: center;
+}
+
+.conf-desc > p {
+  max-width: initial;
+}
+
+.smaller-text {
+  font-size: 1em;
 }
 
 li {
