@@ -362,6 +362,36 @@ a {
   max-width: initial;
 }
 
+.conf-photo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  align-items: center;
+  margin: 1.5em 0;
+}
+
+.conf-photo-container > span > p {
+  max-width: 12em;
+  text-align: center;
+}
+
+.conf-photo {
+  width: 12em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.art-photo {
+  width: 12em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin: 1em 0;
+}
+
 .smaller-text {
   font-size: 1em;
 }
@@ -574,5 +604,10 @@ a.cal-link {
   .dropdown-content {
     align-items: center;
     margin-top: 60px;
+  }
+
+  .conf-photo-container {
+    flex-direction: column;
+    gap: initial;
   }
 }
