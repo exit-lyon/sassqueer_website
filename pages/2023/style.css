@@ -135,6 +135,7 @@ nav a:hover,
   font-size: 1.25em;
   font-family: inherit;
   margin: 0;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -250,7 +251,7 @@ h3.subtitle {
 
 .cal-card {
   padding: 10px;
-  width: 15em;
+  width: 15rem;
   transform: scale(100%);
   transition: all 200ms;
   background-size: cover;
@@ -303,6 +304,10 @@ h3.subtitle {
   transform: scale(110%);
   transition: all 200ms;
   cursor: pointer;
+}
+
+#event-map {
+  width: 80%;
 }
 
 .unsure {
