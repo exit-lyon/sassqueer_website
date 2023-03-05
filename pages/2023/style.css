@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 :root {
   --width: 100vw;
@@ -30,7 +31,7 @@
 *:after {
   box-sizing: border-box;
   text-align: center;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -369,6 +370,16 @@ ul {
   display: inline-block;
   margin: 1em 20%;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .content > p {
+    max-width: initial;
+  }
+
+  ul {
+    margin: 1em 0;
+  }
 }
 
 p a, li a {
