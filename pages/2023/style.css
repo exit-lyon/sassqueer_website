@@ -142,11 +142,10 @@ nav a:hover,
 .dropdown-content {
   display: none;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 5px;
   position: absolute;
   margin-top: 1.75em;
-  min-width: 200px;
   z-index: 1;
 }
 
@@ -601,9 +600,15 @@ a.cal-link {
     transform: none;
   }
 
+  .dropdown {
+    position: relative;
+  }
+
   .dropdown-content {
     align-items: center;
-    margin-top: 60px;
+    margin-top: 2.5em;
+    margin-left: 0;
+    min-width: 100%;
   }
 
   .conf-photo-container {
