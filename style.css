@@ -36,7 +36,7 @@
 
 body {
   background: var(--background-4);
-  background-image: url(assets/fonds/fond.png);
+  background-image: url(assets/fonds/fond.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
@@ -262,41 +262,41 @@ h3.subtitle {
 }
 
 .night-calendar > .cal-card:nth-child(1)::before {
-  background-image: url("./assets/backgrounds/Nuit-Rouge.png");
+  background-image: url("./assets/backgrounds/Nuit-Rouge.jpg");
 }
 .night-calendar > .cal-card:nth-child(2)::before {
-  background-image: url("./assets/backgrounds/Nuit-Orange.png");
+  background-image: url("./assets/backgrounds/Nuit-Orange.jpg");
 }
 .night-calendar > .cal-card:nth-child(3)::before {
-  background-image: url("./assets/backgrounds/Nuit-Jaune.png");
+  background-image: url("./assets/backgrounds/Nuit-Jaune.jpg");
 }
 .night-calendar > .cal-card:nth-child(4)::before {
-  background-image: url("./assets/backgrounds/Nuit-Vert.png");
+  background-image: url("./assets/backgrounds/Nuit-Vert.jpg");
 }
 .night-calendar > .cal-card:nth-child(5)::before {
-  background-image: url("./assets/backgrounds/Nuit-Bleu.png");
+  background-image: url("./assets/backgrounds/Nuit-Bleu.jpg");
 }
 .night-calendar > .cal-card:nth-child(6)::before {
-  background-image: url("./assets/backgrounds/Nuit-Violet.png");
+  background-image: url("./assets/backgrounds/Nuit-Violet.jpg");
 }
 
 .day-calendar > .cal-card:nth-child(1)::before {
-  background-image: url("./assets/backgrounds/Jour-Rouge.png");
+  background-image: url("./assets/backgrounds/Jour-Rouge.jpg");
 }
 .day-calendar > .cal-card:nth-child(2)::before {
-  background-image: url("./assets/backgrounds/Jour-Orange.png");
+  background-image: url("./assets/backgrounds/Jour-Orange.jpg");
 }
 .day-calendar > .cal-card:nth-child(3)::before {
-  background-image: url("./assets/backgrounds/Jour-Jaune.png");
+  background-image: url("./assets/backgrounds/Jour-Jaune.jpg");
 }
 .day-calendar > .cal-card:nth-child(4)::before {
-  background-image: url("./assets/backgrounds/Jour-Vert.png");
+  background-image: url("./assets/backgrounds/Jour-Vert.jpg");
 }
 .day-calendar > .cal-card:nth-child(5)::before {
-  background-image: url("./assets/backgrounds/Jour-Bleu.png");
+  background-image: url("./assets/backgrounds/Jour-Bleu.jpg");
 }
 .day-calendar > .cal-card:nth-child(6)::before {
-  background-image: url("./assets/backgrounds/Jour-Violet.png");
+  background-image: url("./assets/backgrounds/Jour-Violet.jpg");
 }
 
 .cal-card:hover {
@@ -547,7 +547,7 @@ a.cal-link {
   }
 
   body {
-    background-image: url(assets/fonds/fond-vertical.png);
+    background-image: url(assets/fonds/fond-vertical.jpg);
     background-size: contain;
   }
 
