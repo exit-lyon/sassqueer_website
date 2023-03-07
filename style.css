@@ -309,6 +309,10 @@ h3.subtitle {
   width: 80%;
 }
 
+.partners {
+  max-width: 100%;
+}
+
 .unsure {
   font-size: 1em;
   font-style: italic;
