@@ -178,10 +178,14 @@ nav a:hover,
 
 .content {
   max-width: var(--width);
-  width: 80vw;
+  width: 100%;
   margin: 0 auto;
   padding: 1.5em;
   position: relative;
+}
+
+#title-sub {
+  max-width: 60%;
 }
 
 .main-title {
@@ -241,6 +245,7 @@ h3.subtitle {
   justify-content: center;
   gap: 1.5vw;
   margin-top: 3em;
+  flex-wrap: wrap;
 }
 
 .cal-card a {
@@ -362,6 +367,7 @@ a {
 
 .conf-desc > p {
   max-width: initial;
+  max-width: 60%;
 }
 
 .conf-photo-container {
@@ -621,5 +627,9 @@ a.cal-link {
   .conf-photo-container {
     flex-direction: column;
     gap: initial;
+  }
+
+  #title-sub {
+    max-width: 100%;
   }
 }
