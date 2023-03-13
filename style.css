@@ -637,3 +637,32 @@ a.cal-link {
     max-width: 100%;
   }
 }
+
+.skew {
+  transform: skewY(var(--angle));
+}
+
+.intro {
+  font-size: 1.25em;
+  margin: 2rem auto;
+  text-align: center;
+  background: #fef6eb;
+  color: #052626;
+  font-weight: 900;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+.intro a {
+  background-image: linear-gradient(transparent 90%, 0, #052626 100%);
+  background-image: none;
+  border-bottom: 4px solid;
+  transition: none;
+}
+.intro a:hover {
+  border-color: #f1592a;
+  opacity: 1;
+}
+
+.artificial-margin {
+  margin-bottom: 5em;
+}
