@@ -644,14 +644,18 @@ a.cal-link {
 
 .intro {
   font-size: 1.25em;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
   text-align: center;
   background: #fef6eb;
   color: #052626;
   font-weight: 900;
   padding: 0.5em;
   text-transform: uppercase;
+  line-height: 2em;
+  width: fit-content;
+  height: fit-content;
 }
+
 .intro a {
   background-image: linear-gradient(transparent 90%, 0, #052626 100%);
   background-image: none;
@@ -663,6 +667,16 @@ a.cal-link {
   opacity: 1;
 }
 
-.artificial-margin {
-  margin-bottom: 5em;
+.embedded-intro {
+  background: none;
+  color: #fef6eb;
+  width: initial;
+}
+
+.intros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: 2em;
 }
