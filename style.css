@@ -651,6 +651,7 @@ a.cal-link {
   font-weight: 900;
   padding: 0.5em;
   text-transform: uppercase;
+  line-height: 2em;
 }
 .intro a {
   background-image: linear-gradient(transparent 90%, 0, #052626 100%);
