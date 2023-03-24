@@ -34,7 +34,7 @@
         <div class="big-wrapper">
             <div class="bg diag bg-two">
                 <section class="content">
-                    <div class="intros">
+                    <!-- <div class="intros">
                         <p class="intro skew">
                             <a
                                 href="https://www.helloasso.com/associations/exit/evenements/billetterie-stand-up-de-la-sass-queer">
@@ -46,7 +46,7 @@
                                 Twitch
                                 ! < </a>
                         </p>
-                    </div>
+                    </div> -->
 
                     <h3 id="title-sub" class="italic">La Semaine des Arts et Sciences Queer revient en 2023 pour sa
                         deuxième édition du <b>27 au 31 mars</b> !</h3>
@@ -67,16 +67,19 @@
                     </p>
                     <p>Vous ne pouvez pas assister aux événements sur place ?
                     </p>
-                    <p> Vous pouvez suivre l'intégralité de la programmation sur <a
+                    <p> Vous pouvez suivre <b>l'intégralité de la programmation</b> sur <a
                             href="https://www.twitch.tv/nextgaymeroff">la chaîne Twitch de NextGaymer</a>, et sur <a
                             href="https://radionimaitre.oma-radio.fr/">Radio Ni Maître</a> !
                     </p>
-
-                    <p class="intro" style="margin-top: 2em;">
-                        <a href="https://www.twitch.tv/nextgaymeroff"> > Je veux regarder les événements en live sur
-                            Twitch
-                            ! < </a>
-                    </p>
+                    <div class="twitch-wrapper">
+                        <img class="twitch-logo" src="assets/logos/companies/TwitchGlitchPurple.svg" alt="">
+                        <p class="intro">
+                            <a href="https://www.twitch.tv/nextgaymeroff"> > Je veux regarder les événements en live sur
+                                Twitch
+                                ! < </a>
+                        </p>
+                        <img class="twitch-logo" src="assets/logos/companies/TwitchGlitchPurple.svg" alt="">
+                    </div>
 
                     <article class="card-container">
                         <div class="cards">
@@ -110,6 +113,15 @@
                                     alt="Le Consoeurtium. Quatre personnes en tenue de drag sont dans une voiture décapotable."
                                     onclick="clickCarousel(event)">
                                 <p>Le Consoeurtium</p>
+                            </div>
+                            <div class="card hidden-card">
+                                <img src="./assets/drag/flo.png" alt="Flo' Délice" onclick="clickCarousel(event)">
+                                <p>Flo' Délice</p>
+                            </div>
+                            <div class="card hidden-card">
+                                <img src="./assets/drag/oiseau.png" alt="L'oiseau de nuit"
+                                    onclick="clickCarousel(event)">
+                                <p>L'oiseau de nuit</p>
                             </div>
                             <div class="card hidden-card">
                                 <img src="./assets/logos/assos_insa/lezarts_colors.png" alt="Logo des Lézarts"
@@ -147,11 +159,11 @@
                                 <p class="hour">20h00 - Salle René Char</p>
                                 <h3>Soirée stand-up</h3>
                                 <p>Avec Lou Trotignon, Mercutio, Grande Chaussette et Constance Andrea</p>
+                                <p><b>~ COMPLET ~</b></p>
                             </a>
                             <p class="intro skew embedded-intro">
-                                <a
-                                    href="https://www.helloasso.com/associations/exit/evenements/billetterie-stand-up-de-la-sass-queer">
-                                    > Je réserve ma place ! < </a>
+                                <a href="https://www.twitch.tv/nextgaymeroff">
+                                    > En live sur Twitch ! < </a>
                             </p>
                         </div>
                         <div class="cal-card diag">
@@ -176,12 +188,12 @@
                                 <h4>Jeudi 30 mars</h4>
                                 <p class="hour">22h00 - K-Fêt</p>
                                 <h3>Drag Show</h3>
-                                <p>Avec les drags du Consœurtium</p>
-                                
+                                <p>Avec les drags du Consœurtium, Flo' Délice et L'oiseau de nuit</p>
+
                                 <p class="intro skew embedded-intro">
                                     <a
                                         href="https://docs.google.com/forms/d/e/1FAIpQLSeFkrrf-bPQ948pBXsFeBxPV7TKqfaHiLGgN-DWKF1sFJYL-Q/viewform?usp=sf_link">
-                                        > Hors-INSA : je m'inscris !     < </a>
+                                        > Hors-INSA : je m'inscris ! < </a>
                                 </p>
                             </a>
                         </div>
@@ -361,7 +373,8 @@
                 <div class="logos">
                     <img src="./assets/logos/companies/Accenture_logo.png" class="logo" alt="Logo d'Accenture">
                     <img src="./assets/logos/companies/volvo.svg" class="logo" id="logo-volvo" alt="Logo de Volvo">
-                    <img src="./assets/logos/companies/renault_trucks.png" class="logo" id="logo-volvo" alt="Logo de Renault Trucks">
+                    <img src="./assets/logos/companies/renault_trucks.png" class="logo" id="logo-volvo"
+                        alt="Logo de Renault Trucks">
                 </div>
                 <p>
                     En association avec V-Eagle, réseau LGBTQI+ interne au groupe VOLVO
@@ -416,8 +429,7 @@
                         alt="Logo de l'association les Lézarts">
                     <img src="./assets/logos/assos_insa/gatsun.png" class="logo"
                         alt="Logo de l'association Gatsun Records">
-                    <img src="./assets/logos/assos_insa/bobinsa.png" class="logo"
-                        alt="Logo de l'association Bob'INSA">
+                    <img src="./assets/logos/assos_insa/bobinsa.png" class="logo" alt="Logo de l'association Bob'INSA">
                     <!-- <img src="./assets/logos/assos_insa/insaesport.png" class="logo"> -->
                     <img src="./assets/logos/assos_insa/kfet.png" class="logo" alt="Logo de l'association la K-Fêt">
                     <!-- <img src="./assets/logos/assos_insa/insatiable.png" class="logo"> -->

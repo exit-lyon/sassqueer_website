@@ -460,6 +460,17 @@ a.cal-link {
   all: unset;
 }
 
+.twitch-wrapper {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.twitch-logo {
+  width: 2.5em;
+}
+
 /***************************************/
 .card-container {
   width: 100%;
